@@ -90,6 +90,13 @@
             <!-- Logo Section -->
             <div class="flex items-center gap-3 cursor-pointer" onclick="showSection('vision')">
                 <div class="relative w-12 h-12 bg-slate-50 border border-slate-200 rounded-xl p-1.5 flex items-center justify-center shadow-lg">
+                    <div class="w-12 h-12 rounded-xl overflow-hidden bg-black shadow-md border border-slate-800 shrink-0">
+    <img 
+      src="images/PMCouleur.png" 
+      alt="Logo Prodiges Musique" 
+      class="w-full h-full object-cover"
+    />
+  </div>
                     <svg viewBox="0 0 100 100" class="w-full h-full">
                         <path d="M 20 15 L 50 15 C 65 15 65 40 50 40 L 35 40 L 35 85 L 20 85 Z" fill="#0f172a"/>
                         <polygon points="37,22 40,28 46,30 40,32 37,38 34,32 28,30 34,28" fill="#D32F2F"/>
@@ -135,7 +142,7 @@
                <!--  <button onclick="window.print()" class="hidden sm:flex items-center gap-2 bg-slate-100 hover:bg-slate-100 text-slate-900 border border-slate-200 px-3.5 py-2 rounded-xl text-xs font-semibold transition">
                     <i class="fa-solid fa-file-pdf text-brand-red"></i> PDF
                 </button> -->
-                <button onclick="openContactModal()" class="bg-brand-red hover:bg-red-700 text-slate-900 px-3.5 py-2 rounded-xl text-xs font-bold transition flex items-center gap-1.5 shadow-lg shadow-brand-red/30">
+                <button onclick="openContactModal()" class="bg-brand-blue-600 hover:bg-red-200 text-slate-900 px-3.5 py-2 rounded-xl text-xs font-bold transition flex items-center gap-1.5 shadow-lg shadow-brand-red/30">
                 <i class="fa-solid fa-envelope"></i> Contact
                 </button>
             </div>
@@ -159,53 +166,69 @@
         <!-- SECTION 1: VISION, MOT DU BERGER & VALEURS -->
         <section id="section-vision" class="space-y-8">
 
-            <!-- HERO BANNER -->
-        <div class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-black via-dark-card to-black border border-slate-200 p-6 sm:p-10 shadow-2xl">
-            <div class="absolute -right-10 -bottom-10 w-72 h-72 bg-brand-red/15 rounded-full blur-3xl pointer-events-none"></div>
-            <div class="absolute top-4 right-8 text-brand-red/10 text-9xl pointer-events-none font-black font-display">PM</div>
+           <!-- HERO BANNER -->
+<div class="relative overflow-hidden rounded-3xl border border-slate-200 p-6 sm:p-10 shadow-2xl min-h-[400px]">
+    
+    <!-- 1. IMAGE DE FOND -->
+    <img 
+      src="images/tous.jpeg" 
+      alt="Fond Hero Prodiges Musique" 
+      class="absolute inset-0 w-full h-full object-cover object-center z-0"
+    />
 
-            <div class="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-8">
-                <div class="space-y-4 max-w-3xl">
-                   
-                    <div class="bg-white/95 backdrop-blur-md p-8 rounded-3xl shadow-xl border border-slate-200/80 max-w-3xl mx-auto text-center">
-  <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-3">
-    PORTAIL OFFICIEL PRODIGES MUSIQUE
-  </h1>
-  
-  <p class="text-amber-600 font-medium italic mb-4">
-    « Ramener le cœur des jeunes au cœur de Dieu par la puissance de la louange et de l'adoration prophétique. »
-  </p>  <p class="text-slate-700 text-sm sm:text-base leading-relaxed">
-    Bienvenue sur la plateforme centrale d'information, de recrutement et de coordination de Prodiges Musique, le ministère de louange de l'Église des Jeunes Prodiges (EJP / ICC).
-  </p>
-</div>
-                    
-                    <div class="flex flex-wrap gap-3 pt-2">
-                        <button onclick="showSection('recrutement')" class="bg-brand-red hover:bg-red-700 text-slate-900 font-bold px-5 py-2.5 rounded-xl text-xs transition flex items-center gap-2 shadow-lg shadow-brand-red/30">
-                            <i class="fa-solid fa-user-plus"></i> Postuler aux Auditions
-                        </button>
-                        <button onclick="showSection('vision')" class="bg-slate-100 hover:bg-slate-200 text-slate-900 border border-slate-200 font-bold px-5 py-2.5 rounded-xl text-xs transition flex items-center gap-2">
-                            <i class="fa-solid fa-book-open"></i> Découvrir la Vision & Mot du Berger
-                        </button>
-                    </div>
-                </div>
+    <!-- 2. CALQUE DE NOIRCISSEMENT (OVERLAY) -->
+    <!-- Ajustez bg-black/70 (70% de noir) si vous voulez plus ou moins sombre -->
+    <div class="absolute inset-0 bg-black/70 backdrop-blur-[2px] z-0"></div>
 
-                <!-- Stats Panel -->
-                <div class="grid grid-cols-3 gap-3 sm:gap-4 bg-slate-50/80 p-5 rounded-3xl border border-slate-200 backdrop-blur-md min-w-[280px]">
-                    <div class="text-center px-2">
-                        <div class="text-2xl sm:text-4xl font-display font-extrabold text-slate-900" id="statPolesCount">09</div>
-                        <div class="text-[10px] sm:text-xs font-semibold text-brand-red uppercase tracking-wider mt-1">Pôles</div>
-                    </div>
-                    <div class="text-center px-2 border-x border-slate-200">
-                        <div class="text-2xl sm:text-4xl font-display font-extrabold text-amber-400" id="statMembersCount">66</div>
-                        <div class="text-[10px] sm:text-xs font-semibold text-slate-600 uppercase tracking-wider mt-1">Membres</div>
-                    </div>
-                    <div class="text-center px-2">
-                        <div class="text-2xl sm:text-4xl font-display font-extrabold text-slate-900" id="statRolesCount">55</div>
-                        <div class="text-[10px] sm:text-xs font-semibold text-slate-600 uppercase tracking-wider mt-1">Services</div>
-                    </div>
-                </div>
+    <!-- EFFETS DE DÉGRADÉ & DÉCORATION -->
+    <div class="absolute -right-10 -bottom-10 w-72 h-72 bg-brand-red/20 rounded-full blur-3xl pointer-events-none z-0"></div>
+    <div class="absolute top-4 right-8 text-white/5 text-9xl pointer-events-none font-black font-display z-0">PM</div>
+
+    <!-- CONTENU PRINCIPAL (Placé au-dessus avec z-10) -->
+    <div class="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-8">
+        <div class="space-y-4 max-w-3xl">
+           
+            <div class="bg-white/95 backdrop-blur-md p-8 rounded-3xl shadow-xl border border-slate-200/80 max-w-3xl mx-auto text-center">
+              <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-3">
+                PORTAIL OFFICIEL PRODIGES MUSIQUE
+              </h1>
+              
+              <p class="text-amber-600 font-medium italic mb-4">
+                « Ramener le cœur des jeunes au cœur de Dieu par la puissance de la louange et de l'adoration prophétique. »
+              </p>
+              
+              <p class="text-slate-700 text-sm sm:text-base leading-relaxed">
+                Bienvenue sur la plateforme centrale d'information, de recrutement et de coordination de Prodiges Musique, le ministère de louange de l'Église des Jeunes Prodiges (EJP / ICC).
+              </p>
+            </div>
+            
+            <div class="flex flex-wrap gap-3 pt-2">
+                <button onclick="showSection('recrutement')" class="bg-red-500 hover:bg-red-600 text-white font-bold px-5 py-2.5 rounded-xl text-xs transition flex items-center gap-2 shadow-lg shadow-red-500/30">
+                    <i class="fa-solid fa-user-plus"></i> Postuler aux Auditions
+                </button>
+                <button onclick="showSection('vision')" class="bg-white/10 hover:bg-white/20 text-white border border-white/20 backdrop-blur-md font-bold px-5 py-2.5 rounded-xl text-xs transition flex items-center gap-2">
+                    <i class="fa-solid fa-book-open"></i> Découvrir la Vision & Mot du Berger
+                </button>
             </div>
         </div>
+
+        <!-- Stats Panel -->
+        <div class="grid grid-cols-3 gap-3 sm:gap-4 bg-black/40 p-5 rounded-3xl border border-white/10 backdrop-blur-md min-w-[280px]">
+            <div class="text-center px-2">
+                <div class="text-2xl sm:text-4xl font-display font-extrabold text-white" id="statPolesCount">09</div>
+                <div class="text-[10px] sm:text-xs font-semibold text-red-400 uppercase tracking-wider mt-1">Pôles</div>
+            </div>
+            <div class="text-center px-2 border-x border-white/10">
+                <div class="text-2xl sm:text-4xl font-display font-extrabold text-amber-400" id="statMembersCount">66</div>
+                <div class="text-[10px] sm:text-xs font-semibold text-slate-300 uppercase tracking-wider mt-1">Membres</div>
+            </div>
+            <div class="text-center px-2">
+                <div class="text-2xl sm:text-4xl font-display font-extrabold text-white" id="statRolesCount">55</div>
+                <div class="text-[10px] sm:text-xs font-semibold text-slate-300 uppercase tracking-wider mt-1">Services</div>
+            </div>
+        </div>
+    </div>
+</div>
             
             <!-- Pastoral Note & Ministry Presentation -->
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
@@ -224,9 +247,13 @@
                         </div>
                         
                         <div class="flex items-center gap-4 mb-6">
-                            <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-amber-500 to-brand-red text-slate-900 flex items-center justify-center font-bold text-xl shadow-lg">
-                                PSE
-                            </div>
+                            <div class="w-14 h-14 rounded-2xl bg-black overflow-hidden flex items-center justify-center shadow-lg border border-slate-800 shrink-0">
+    <img 
+        src="images/berger1.JPG" 
+        alt="Logo Prodiges Musique" 
+        class="w-full h-full object-cover"
+    />
+</div>
                             <div>
                                 <h3 class="text-xl font-bold text-slate-900">Pasteur Samuel EBOUMBOU</h3>
                                 <p class="text-xs text-amber-400 font-semibold">Berger Principal des Églises Jeunes Prodiges (EJP)</p>
@@ -316,50 +343,67 @@
                 </div>
             </div>
 
-            <!-- Nos Valeurs (5 piliers) -->
-            <div>
-                <div class="text-center max-w-xl mx-auto mb-6">
-                    <span class="text-xs font-extrabold text-brand-red uppercase tracking-widest">Culture du Ministère</span>
-                    <h2 class="text-2xl sm:text-3xl font-display font-extrabold text-slate-900 mt-1">Nos 5 Valeurs Fondamentales</h2>
-                </div>
+          <!-- Nos Valeurs (5 piliers) -->
+<div>
+    <div class="text-center max-w-xl mx-auto mb-6">
+        <span class="text-xs font-extrabold text-brand-red uppercase tracking-widest">Culture du Ministère</span>
+        <h2 class="text-2xl sm:text-3xl font-display font-extrabold text-slate-900 mt-1">Nos 5 Valeurs Fondamentales</h2>
+    </div>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
-                    <div class="pm-card p-5 rounded-2xl space-y-2 text-center">
-                        <div class="text-brand-red text-2xl mb-2"><i class="fa-solid fa-heart-pulse"></i></div>
-                        <h4 class="text-sm font-bold text-slate-900">Cœur de Dieu</h4>
-                        <p class="text-[11px] text-slate-600 leading-normal">Premier désir: le cœur de Dieu et la conformité à Christ.</p>
-                        <span class="inline-block text-[10px] font-bold text-brand-red bg-brand-red/10 px-2 py-0.5 rounded">Galates 5:22-23</span>
-                    </div>
-
-                    <div class="pm-card p-5 rounded-2xl space-y-2 text-center">
-                        <div class="text-amber-400 text-2xl mb-2"><i class="fa-solid fa-book-bible"></i></div>
-                        <h4 class="text-sm font-bold text-slate-900">Parole de Dieu</h4>
-                        <p class="text-[11px] text-slate-600 leading-normal">Composé de jeunes consistants et assis dans la Parole.</p>
-                        <span class="inline-block text-[10px] font-bold text-amber-400 bg-amber-400/10 px-2 py-0.5 rounded">Josué 1:8</span>
-                    </div>
-
-                    <div class="pm-card p-5 rounded-2xl space-y-2 text-center">
-                        <div class="text-indigo-400 text-2xl mb-2"><i class="fa-solid fa-people-group"></i></div>
-                        <h4 class="text-sm font-bold text-slate-900">Unité</h4>
-                        <p class="text-[11px] text-slate-600 leading-normal">Avancer ensemble dans un même esprit et une même vision.</p>
-                        <span class="inline-block text-[10px] font-bold text-indigo-400 bg-indigo-400/10 px-2 py-0.5 rounded">Jean 17:21</span>
-                    </div>
-
-                    <div class="pm-card p-5 rounded-2xl space-y-2 text-center">
-                        <div class="text-emerald-400 text-2xl mb-2"><i class="fa-solid fa-fire text-2xl"></i></div>
-                        <h4 class="text-sm font-bold text-slate-900">Consécration</h4>
-                        <p class="text-[11px] text-slate-600 leading-normal">Se donner pleinement à Dieu dans notre intimité et notre service.</p>
-                        <span class="inline-block text-[10px] font-bold text-emerald-400 bg-emerald-400/10 px-2 py-0.5 rounded">Nombres 8:14</span>
-                    </div>
-
-                    <div class="pm-card p-5 rounded-2xl space-y-2 text-center sm:col-span-2 lg:col-span-1">
-                        <div class="text-purple-400 text-2xl mb-2"><i class="fa-solid fa-star"></i></div>
-                        <h4 class="text-sm font-bold text-slate-900">Excellence</h4>
-                        <p class="text-[11px] text-slate-600 leading-normal">Aspirer constamment à rendre un service excellent à Dieu.</p>
-                        <span class="inline-block text-[10px] font-bold text-purple-400 bg-purple-400/10 px-2 py-0.5 rounded">1 Chron. 25:7</span>
-                    </div>
-                </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+        
+        <!-- Valeur 1: Cœur de Dieu -->
+        <div class="pm-card p-5 rounded-2xl space-y-2 text-center flex flex-col items-center">
+            <div class="w-12 h-12 rounded-xl overflow-hidden mb-2 shadow-sm shrink-0">
+                <img src="images/coeur.jpeg" alt="Cœur de Dieu" class="w-full h-full object-cover" />
             </div>
+            <h4 class="text-sm font-bold text-slate-900">Cœur de Dieu</h4>
+            <p class="text-[11px] text-slate-600 leading-normal">Premier désir: le cœur de Dieu et la conformité à Christ.</p>
+            <span class="inline-block text-[10px] font-bold text-brand-red bg-brand-red/10 px-2 py-0.5 rounded">Galates 5:22-23</span>
+        </div>
+
+        <!-- Valeur 2: Parole de Dieu -->
+        <div class="pm-card p-5 rounded-2xl space-y-2 text-center flex flex-col items-center">
+            <div class="w-12 h-12 rounded-xl overflow-hidden mb-2 shadow-sm shrink-0">
+                <img src="images/parole.JPG" alt="Parole de Dieu" class="w-full h-full object-cover" />
+            </div>
+            <h4 class="text-sm font-bold text-slate-900">Parole de Dieu</h4>
+            <p class="text-[11px] text-slate-600 leading-normal">Composé de jeunes consistants et assis dans la Parole.</p>
+            <span class="inline-block text-[10px] font-bold text-amber-500 bg-amber-500/10 px-2 py-0.5 rounded">Josué 1:8</span>
+        </div>
+
+        <!-- Valeur 3: Unité -->
+        <div class="pm-card p-5 rounded-2xl space-y-2 text-center flex flex-col items-center">
+            <div class="w-12 h-12 rounded-xl overflow-hidden mb-2 shadow-sm shrink-0">
+                <img src="images/touss.jpeg" alt="Unité" class="w-full h-full object-cover" />
+            </div>
+            <h4 class="text-sm font-bold text-slate-900">Unité</h4>
+            <p class="text-[11px] text-slate-600 leading-normal">Avancer ensemble dans un même esprit et une même vision.</p>
+            <span class="inline-block text-[10px] font-bold text-indigo-500 bg-indigo-500/10 px-2 py-0.5 rounded">Jean 17:21</span>
+        </div>
+
+        <!-- Valeur 4: Consécration -->
+        <div class="pm-card p-5 rounded-2xl space-y-2 text-center flex flex-col items-center">
+            <div class="w-12 h-12 rounded-xl overflow-hidden mb-2 shadow-sm shrink-0">
+                <img src="images/conse.jpg" alt="Consécration" class="w-full h-full object-cover" />
+            </div>
+            <h4 class="text-sm font-bold text-slate-900">Consécration</h4>
+            <p class="text-[11px] text-slate-600 leading-normal">Se donner pleinement à Dieu dans notre intimité et notre service.</p>
+            <span class="inline-block text-[10px] font-bold text-emerald-500 bg-emerald-500/10 px-2 py-0.5 rounded">Nombres 8:14</span>
+        </div>
+
+        <!-- Valeur 5: Excellence -->
+        <div class="pm-card p-5 rounded-2xl space-y-2 text-center sm:col-span-2 lg:col-span-1 flex flex-col items-center">
+            <div class="w-12 h-12 rounded-xl overflow-hidden mb-2 shadow-sm shrink-0">
+                <img src="images/exel.jpeg" alt="Excellence" class="w-full h-full object-cover" />
+            </div>
+            <h4 class="text-sm font-bold text-slate-900">Excellence</h4>
+            <p class="text-[11px] text-slate-600 leading-normal">Aspirer constantly à rendre un service excellent à Dieu.</p>
+            <span class="inline-block text-[10px] font-bold text-purple-500 bg-purple-500/10 px-2 py-0.5 rounded">1 Chron. 25:7</span>
+        </div>
+
+    </div>
+</div>
 
             <!-- Notre Mission & Biblique -->
             <div class="pm-card p-6 sm:p-8 rounded-3xl space-y-6">
@@ -400,80 +444,113 @@
 
         </section>
 
-        <!-- SECTION 2: ORGANIGRAMME & PÔLES -->
-        <section id="section-poles" class="hidden space-y-8">
-            
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                <div>
-                    <h2 class="text-2xl sm:text-3xl font-display font-extrabold text-slate-900">Structure & Organigramme 2026-2027</h2>
-                    <p class="text-xs text-slate-600">Découvrez la répartition des 11 pôles et l'arbre de supervision du ministère.</p>
+       <!-- SECTION 2: ORGANIGRAMME & PÔLES -->
+<section id="section-poles" class="hidden space-y-8">
+    
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div>
+            <h2 class="text-2xl sm:text-3xl font-display font-extrabold text-slate-900">Structure & Organigramme 2026-2027</h2>
+            <p class="text-xs text-slate-600">Découvrez la répartition des 11 pôles et l'arbre de supervision du ministère.</p>
+        </div>
+        <div class="flex items-center gap-2">
+            <input type="text" id="poleSearchInput" oninput="filterPoles()" placeholder="Filtrer un pôle..." class="bg-white border border-slate-200 rounded-xl px-4 py-2 text-xs focus:outline-none focus:border-brand-red text-slate-900 w-64">
+        </div>
+    </div>
+
+    <!-- Executive Leadership & Chart Row -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        
+        <!-- Leadership Board Card -->
+        <div class="lg:col-span-5 pm-card rounded-3xl p-6 flex flex-col justify-between space-y-6">
+            <div>
+                <div class="flex items-center justify-between mb-4">
+                    <span class="text-xs font-extrabold text-brand-red uppercase tracking-widest">Bureau & Supervision</span>
+                    <i class="fa-solid fa-crown text-amber-400"></i>
                 </div>
-                <div class="flex items-center gap-2">
-                    <input type="text" id="poleSearchInput" oninput="filterPoles()" placeholder="Filtrer un pôle..." class="bg-white border border-slate-200 rounded-xl px-4 py-2 text-xs focus:outline-none focus:border-brand-red text-slate-900 w-64">
-                </div>
-            </div>
+                <h3 class="text-lg font-bold text-slate-900 mb-2">Direction du Ministère PM</h3>
+                <p class="text-xs text-slate-600 mb-4">Pilotage stratégique, accompagnement pastoral et formation technique.</p>
 
-            <!-- Executive Leadership & Chart Row -->
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
-                
-                <!-- Leadership Board Card -->
-                <div class="lg:col-span-5 pm-card rounded-3xl p-6 flex flex-col justify-between space-y-6">
-                    <div>
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="text-xs font-extrabold text-brand-red uppercase tracking-widest">Bureau & Supervision</span>
-                            <i class="fa-solid fa-crown text-amber-400"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-slate-900 mb-2">Direction du Ministère PM</h3>
-                        <p class="text-xs text-slate-600 mb-4">Pilotage stratégique, accompagnement pastoral et formation technique.</p>
-
-                        <div class="space-y-2.5">
-                            <div class="p-3 bg-slate-50/60 rounded-2xl border border-slate-200 flex items-center justify-between">
-                                <div class="flex items-center gap-3">
-                                    <div class="w-9 h-9 rounded-xl bg-brand-red/20 text-brand-red border border-brand-red/30 flex items-center justify-center font-bold text-xs">
-                                        PSE
-                                    </div>
-                                    <div>
-                                        <div class="text-xs font-bold text-slate-900">Pasteur Samuel EBOUMBOU</div>
-                                        <div class="text-[10px] text-amber-400">Supervision Spirituelle</div>
-                                    </div>
-                                </div>
-                                <span class="px-2 py-0.5 rounded bg-amber-500/20 text-amber-400 text-[9px] font-bold">BERGER</span>
+                <div class="space-y-2.5">
+                    
+                    <!-- Pasteur Samuel EBOUMBOU -->
+                    <div class="p-3 bg-slate-50/60 rounded-2xl border border-slate-200 flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl overflow-hidden shadow-sm shrink-0 bg-slate-200">
+                                <img src="assets/images/samuel-eboumbou.jpg" alt="Pasteur Samuel EBOUMBOU" class="w-full h-full object-cover">
                             </div>
-
-                            <div class="p-3 bg-slate-50/60 rounded-2xl border border-slate-200 flex items-center justify-between">
-                                <div class="flex items-center gap-3">
-                                    <div class="w-9 h-9 rounded-xl bg-slate-100 text-slate-900 border border-slate-300 flex items-center justify-center font-bold text-xs">
-                                        EG
-                                    </div>
-                                    <div>
-                                        <div class="text-xs font-bold text-slate-900">Emmanuella GBEKOU</div>
-                                        <div class="text-[10px] text-brand-red font-semibold">Responsable Principale</div>
-                                    </div>
-                                </div>
-                                <span class="px-2 py-0.5 rounded bg-brand-red/20 text-brand-red text-[9px] font-bold">Responsable</span>
-                            </div>
-
-                            <div class="grid grid-cols-2 gap-2 text-xs pt-1">
-                                <div class="bg-slate-50/40 p-2.5 rounded-xl border border-slate-200">
-                                    <div class="text-[10px] text-slate-600">Responsable des musiciens</div>
-                                    <div class="text-xs font-bold text-slate-900">Stéphane ZOA</div>
-                                </div>
-                                <div class="bg-slate-50/40 p-2.5 rounded-xl border border-slate-200">
-                                    <div class="text-[10px] text-slate-600">Responsable de la formation</div>
-                                    <div class="text-xs font-bold text-slate-900">Aurore SOBNGWI</div>
-                                </div>
-                                <div class="bg-slate-50/40 p-2.5 rounded-xl border border-slate-200">
-                                    <div class="text-[10px] text-slate-600">Responsable vie spirituelle</div>
-                                    <div class="text-xs font-bold text-slate-900">Joseph ZOUHONGBE</div>
-                                </div>
-                                <div class="bg-slate-50/40 p-2.5 rounded-xl border border-slate-200">
-                                    <div class="text-[10px] text-slate-600">Responsable coordo & orga. des events</div>
-                                    <div class="text-xs font-bold text-slate-900">Leslie TENYONG</div>
-                                </div>
+                            <div>
+                                <div class="text-xs font-bold text-slate-900">Pasteur Samuel EBOUMBOU</div>
+                                <div class="text-[10px] text-amber-400 font-semibold">Supervision Spirituelle</div>
                             </div>
                         </div>
+                        <span class="px-2 py-0.5 rounded bg-amber-500/20 text-amber-400 text-[9px] font-bold">BERGER</span>
+                    </div>
+
+                    <!-- Emmanuella GBEKOU -->
+                    <div class="p-3 bg-slate-50/60 rounded-2xl border border-slate-200 flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl overflow-hidden shadow-sm shrink-0 bg-slate-200">
+                                <img src="images/emma.jpg" alt="Emmanuella GBEKOU" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <div class="text-xs font-bold text-slate-900">Emmanuella GBEKOU</div>
+                                <div class="text-[10px] text-brand-red font-semibold">Responsable Principale</div>
+                            </div>
+                        </div>
+                        <span class="px-2 py-0.5 rounded bg-brand-red/20 text-brand-red text-[9px] font-bold">Responsable</span>
+                    </div>
+
+                    <!-- Grille des Responsables de Pôles avec photos -->
+                    <div class="grid grid-cols-2 gap-2 text-xs pt-1">
+                        
+                        <!-- Stéphane ZOA -->
+                        <div class="bg-slate-50/40 p-2.5 rounded-xl border border-slate-200 flex items-center gap-2.5">
+                            <div class="w-8 h-8 rounded-lg overflow-hidden shrink-0 bg-slate-200">
+                                <img src="images/steph.jpg" alt="Stéphane ZOA" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <div class="text-[10px] text-slate-600">Responsable musiciens</div>
+                                <div class="text-xs font-bold text-slate-900">Stéphane ZOA</div>
+                            </div>
+                        </div>
+
+                        <!-- Aurore SOBNGWI -->
+                        <div class="bg-slate-50/40 p-2.5 rounded-xl border border-slate-200 flex items-center gap-2.5">
+                            <div class="w-8 h-8 rounded-lg overflow-hidden shrink-0 bg-slate-200">
+                                <img src="images/Aurore.jpg" alt="Aurore SOBNGWI" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <div class="text-[10px] text-slate-600">Responsable formation</div>
+                                <div class="text-xs font-bold text-slate-900">Aurore SOBNGWI</div>
+                            </div>
+                        </div>
+
+                        <!-- Joseph ZOUHONGBE -->
+                        <div class="bg-slate-50/40 p-2.5 rounded-xl border border-slate-200 flex items-center gap-2.5">
+                            <div class="w-8 h-8 rounded-lg overflow-hidden shrink-0 bg-slate-200">
+                                <img src="images/joseph.jpg" alt="Joseph ZOUHONGBE" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <div class="text-[10px] text-slate-600">Vie spirituelle</div>
+                                <div class="text-xs font-bold text-slate-900">Joseph ZOUHONGBE</div>
+                            </div>
+                        </div>
+
+                        <!-- Leslie TENYONG -->
+                        <div class="bg-slate-50/40 p-2.5 rounded-xl border border-slate-200 flex items-center gap-2.5">
+                            <div class="w-8 h-8 rounded-lg overflow-hidden shrink-0 bg-slate-200">
+                                <img src="images/leslie.jpg" alt="Leslie TENYONG" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <div class="text-[10px] text-slate-600">Orga. & Events</div>
+                                <div class="text-xs font-bold text-slate-900">Leslie TENYONG</div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
+            </div>
+        </div>
 
                 <!-- Distribution Chart -->
                 <div class="lg:col-span-7 pm-card rounded-3xl p-6 flex flex-col justify-between">
@@ -607,17 +684,30 @@
 
         <!-- SECTION 3: RECRUTEMENT & AUDITIONS -->
         <section id="section-recrutement" class="hidden space-y-8">
-            <div class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-amber-950/40 via-dark-card to-black border border-amber-500/30 p-6 sm:p-10 shadow-2xl">
-                <div class="max-w-3xl space-y-3">
-                    <span class="px-3 py-1 rounded-full bg-amber-500/20 text-amber-400 border border-amber-500/30 text-xs font-bold uppercase">
-                        <i class="fa-solid fa-microphone"></i> Candidatures Externes & Internes
-                    </span>
-                    <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-slate-900">Rejoindre Prodiges Musique</h2>
-                    <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
-                        Le recrutement au sein du ministère de louange PM s'effectue <strong class="text-amber-400">tous les 6 mois (2 fois par an)</strong>. Découvrez le processus rigoureux visant à valider l'alignement spirituel, technique et l'engagement de chaque chantre et musicien.
-                    </p>
-                </div>
-            </div>
+           <div class="relative overflow-hidden rounded-3xl border border-amber-500/30 p-6 sm:p-10 shadow-2xl min-h-[220px] flex items-center">
+    
+    <!-- 1. IMAGE DE FOND -->
+    <img 
+        src="images/IMG_9768.jpg" 
+        alt="Rejoindre Prodiges Musique" 
+        class="absolute inset-0 w-full h-full object-cover object-center z-0"
+    />
+
+    <!-- 2. CALQUE D'ASSOMBRISSEMENT (OVERLAY DÉGRADÉ) -->
+    <!-- Ce dégradé assombrit le fond tout en conservant les tons chauds du thème -->
+    <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/75 to-black/60 backdrop-blur-[1px] z-0"></div>
+
+    <!-- 3. CONTENU (Rendu au-dessus grâce à z-10 et adapté aux couleurs sombres) -->
+    <div class="relative z-10 max-w-3xl space-y-3">
+        <!-- <span class="px-3 py-1 rounded-full bg-amber-500/20 text-amber-400 border border-amber-500/30 text-xs font-bold uppercase">
+            <i class="fa-solid fa-microphone"></i> Candidatures Externes & Internes
+        </span> -->
+        <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-white">Rejoindre Prodiges Musique</h2>
+        <p class="text-xs sm:text-sm text-slate-200 leading-relaxed">
+            Le recrutement au sein du ministère de louange PM s'effectue <strong class="text-amber-400">tous les 6 mois (2 fois par an)</strong>. Découvrez le processus rigoureux visant à valider l'alignement spirituel, technique et l'engagement de chaque chantre et musicien.
+        </p>
+    </div>
+</div>
 
             <!-- Pipeline Steps (5 Steps) -->
             <div>
@@ -938,7 +1028,7 @@
                 </div>
             </div>
             <div class="text-center md:text-right">
-                <div>Sous la supervision du <strong class="text-slate-700">Pasteur Samuel EBOUMBOU</strong></div>
+                <div>Sous la supervision de <strong class="text-slate-700"> l'APÔTRE Yvan CASTANOU et Pasteur Samuel EBOUMBOU</strong></div>
                 <div class="text-[10px] text-brand-red mt-0.5 font-semibold">"Ramener le cœur des jeunes au cœur de Dieu"</div>
             </div>
         </div>
@@ -1154,7 +1244,7 @@
             { id: 4, name: "Communication", icon: "fa-bullhorn", mission: "Création de contenus, réseaux sociaux, direction artistique et visuelle.", count: 6, roles: ["Référente", "Adjoint", "Membres"] },
             { id: 5, name: "Organisation Cultes", icon: "fa-sliders", mission: "Gestion logistique des répétitions, balances, déroulés et débriefings, référents.", count: 9, roles: ["Référente", "Adjoint", "Référents Voix"] },
             { id: 6, name: "Formation", icon: "fa-graduation-cap", mission: "Édification biblique, formation technique vocal/instrumentale et développement.", count: 4, roles: ["Référente", "Adjointe", "Membres"] },
-            { id: 7, name: "Coordination Projets", icon: "fa-calendar-star", mission: "Organisation des soirées d'adoration, retraites spirituelles et événements majeurs.", count: 4, roles: ["Référente", "Membres"] },
+            { id: 7, name: "Coordination Projets", icon: "fa-solid fa-list-check", mission: "Organisation des soirées d'adoration, retraites spirituelles et événements majeurs.", count: 4, roles: ["Référente", "Membres"] },
             { id: 8, name: "Bureau AEF", icon: "fa-building-columns", mission: "Direction et coordination spécifique relative à PM AEF(Ados en feu).", count: 5, roles: ["Resp AEF", "Co-Resp", "Référents"] },
             { id: 9, name: "Anagkazo Worship", icon: "fa-guitar", mission: "Unité musicale dédiée à l'évangélisation et à l'implantation de la louange.", count: 7, roles: ["Référent", "Membres"] },
             { id: 10, name: "Écriture", icon: "fa-pen-nib", mission: "Composition de cantiques originaux et création d'œuvres artistiques.", count: 3, roles: ["Référente", "Adjoint", "Membre"] },
@@ -1191,7 +1281,7 @@ const rawMembers = [
     { n: "KOUAKOU", p: "Océane", s: "F", pole: "Organisation Cultes", role: "Membre", pupitre: "Soprano, Alto" },
     { n: "MEDA", p: "Richaldine", s: "F", pole: "Organisation Cultes", role: "Membre", pupitre: "Ténor, Alto" },
     { n: "LUNDY", p: "Mégane", s: "F", pole: "Organisation Cultes", role: "Membre", pupitre: "Soprano" },
-    { n: "MANOS LINIS", p: "Aurore Olah", s: "F", pole: "Organisation Cultes", role: "Membre", pupitre: "Alto" },
+    { n: "MANO LINIS", p: "Aurore Olah", s: "F", pole: "Organisation Cultes", role: "Membre", pupitre: "Alto" },
     { n: "LAPOLICE", p: "Jade", s: "F", pole: "Organisation Cultes", role: "Membre", pupitre: "Ténor, Alto" },
 
     // BUREAU AEF
@@ -1265,7 +1355,9 @@ const rawMembers = [
     { n: "BAKALA", p: "Gregory", s: "M", pole: "N'est dans aucun pôle pour l'instant", role: "Membre", pupitre: "Ténor" },
     { n: "JEAN FRANÇOIS", p: "Juvens", s: "M", pole: "N'est dans aucun pôle pour l'instant", role: "Membre", pupitre: "Ténor" },
     { n: "MOUSSIO", p: "Yessaya", s: "M", pole: "N'est dans aucun pôle pour l'instant", role: "Membre", pupitre: "Ténor" },
-    { n: "BRUNE", p: "Sarah", s: "F", pole: "N'est dans aucun pôle pour l'instant", role: "Membre", pupitre: "Ténor, Alto" }
+    { n: "BRUNE", p: "Sarah", s: "F", pole: "N'est dans aucun pôle pour l'instant", role: "Membre", pupitre: "Ténor, Alto" },
+
+
 ];
 
 // REGROUPEMENT PAR PERSONNE (GÈRE PLUSIEURS RÔLES ET INSTRUMENTS)
