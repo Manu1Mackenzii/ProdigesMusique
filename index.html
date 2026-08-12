@@ -450,15 +450,15 @@
             <h2 class="text-2xl sm:text-3xl font-display font-extrabold text-slate-900">Structure & Organigramme 2026-2027</h2>
             <p class="text-xs text-slate-600">Découvrez la répartition des 11 pôles et l'arbre de supervision du ministère.</p>
         </div>
-        <div class="flex items-center gap-2">
+        <!-- <div class="flex items-center gap-2">
             <input type="text" id="poleSearchInput" oninput="filterPoles()" placeholder="Filtrer un pôle..." class="bg-white border border-slate-200 rounded-xl px-4 py-2 text-xs focus:outline-none focus:border-brand-red text-slate-900 w-64">
-        </div>
+        </div> -->
     </div>
 
     <!-- Executive Leadership & Chart Row -->
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
         
-        <!-- Leadership Board Card -->
+        <!-- CÔTÉ GAUCHE : Leadership Board Card (5 colonnes) -->
         <div class="lg:col-span-5 pm-card rounded-3xl p-6 flex flex-col justify-between space-y-6">
             <div>
                 <div class="flex items-center justify-between mb-4">
@@ -469,108 +469,103 @@
                 <p class="text-xs text-slate-600 mb-4">Pilotage stratégique, accompagnement pastoral et formation technique.</p>
 
                 <div class="space-y-3">
-    
-    <!-- Pasteur Samuel EBOUMBOU -->
-    <div class="p-3.5 bg-slate-50/60 rounded-2xl border border-slate-200 flex items-center justify-between gap-3">
-        <div class="flex items-center gap-3.5">
-            <!-- Image agrandie à w-16 h-16 -->
-            <div class="w-16 h-16 rounded-xl overflow-hidden shadow-sm shrink-0 bg-slate-200 border border-slate-300/60">
-                <img src="images/P1140346.jpg" alt="Pasteur Samuel EBOUMBOU" class="w-full h-full object-cover object-top">
-            </div>
-            <div>
-                <div class="text-sm font-bold text-slate-900">Pasteur Samuel EBOUMBOU</div>
-                <div class="text-xs text-amber-500 font-semibold">Supervision Spirituelle</div>
-            </div>
-        </div>
-        <span class="px-2.5 py-1 rounded bg-amber-500/20 text-amber-500 text-[10px] font-bold shrink-0">BERGER</span>
-    </div>
-
-    <!-- Emmanuella GBEKOU -->
-    <div class="p-3.5 bg-slate-50/60 rounded-2xl border border-slate-200 flex items-center justify-between gap-3">
-        <div class="flex items-center gap-3.5">
-            <!-- Image agrandie à w-16 h-16 -->
-            <div class="w-16 h-16 rounded-xl overflow-hidden shadow-sm shrink-0 bg-slate-200 border border-slate-300/60">
-                <img src="images/emma.jpg" alt="Emmanuella GBEKOU" class="w-full h-full object-cover object-top">
-            </div>
-            <div>
-                <div class="text-sm font-bold text-slate-900">Emmanuella GBEKOU</div>
-                <div class="text-xs text-brand-red font-semibold">Responsable Principale</div>
-            </div>
-        </div>
-        <span class="px-2.5 py-1 rounded bg-brand-red/20 text-brand-red text-[10px] font-bold shrink-0">RESPONSABLE</span>
-    </div>
-
-    <!-- Grille des Responsables de Pôles avec photos -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1">
-        
-        <!-- Stéphane ZOA -->
-        <div class="bg-slate-50/40 p-3 rounded-xl border border-slate-200 flex items-center gap-3">
-            <!-- Image agrandie à w-12 h-12 -->
-            <div class="w-12 h-12 rounded-lg overflow-hidden shrink-0 bg-slate-200 border border-slate-300/50">
-                <img src="images/steph.jpg" alt="Stéphane ZOA" class="w-full h-full object-cover object-top">
-            </div>
-            <div>
-                <div class="text-[11px] text-slate-500 font-medium">Responsable musiciens</div>
-                <div class="text-xs font-bold text-slate-900">Stéphane ZOA</div>
-            </div>
-        </div>
-
-        <!-- Aurore SOBNGWI -->
-        <div class="bg-slate-50/40 p-3 rounded-xl border border-slate-200 flex items-center gap-3">
-            <!-- Image agrandie à w-12 h-12 -->
-            <div class="w-12 h-12 rounded-lg overflow-hidden shrink-0 bg-slate-200 border border-slate-300/50">
-                <img src="images/Aurore.jpg" alt="Aurore SOBNGWI" class="w-full h-full object-cover object-top">
-            </div>
-            <div>
-                <div class="text-[11px] text-slate-500 font-medium">Responsable formation</div>
-                <div class="text-xs font-bold text-slate-900">Aurore SOBNGWI</div>
-            </div>
-        </div>
-
-        <!-- Joseph ZOUHONGBE -->
-        <div class="bg-slate-50/40 p-3 rounded-xl border border-slate-200 flex items-center gap-3">
-            <!-- Image agrandie à w-12 h-12 -->
-            <div class="w-12 h-12 rounded-lg overflow-hidden shrink-0 bg-slate-200 border border-slate-300/50">
-                <img src="images/joseph.jpg" alt="Joseph ZOUHONGBE" class="w-full h-full object-cover object-top">
-            </div>
-            <div>
-                <div class="text-[11px] text-slate-500 font-medium">Vie spirituelle</div>
-                <div class="text-xs font-bold text-slate-900">Joseph ZOUHONGBE</div>
-            </div>
-        </div>
-
-        <!-- Leslie TENYONG -->
-        <div class="bg-slate-50/40 p-3 rounded-xl border border-slate-200 flex items-center gap-3">
-            <!-- Image agrandie à w-12 h-12 -->
-            <div class="w-12 h-12 rounded-lg overflow-hidden shrink-0 bg-slate-200 border border-slate-300/50">
-                <img src="images/leslie.jpg" alt="Leslie TENYONG" class="w-full h-full object-cover object-top">
-            </div>
-            <div>
-                <div class="text-[11px] text-slate-500 font-medium">Orga. & Events</div>
-                <div class="text-xs font-bold text-slate-900">Leslie TENYONG</div>
-            </div>
-        </div>
-
-    </div>
-</div>
-                    
-                 
-
-                <!-- Distribution Chart -->
-                <div class="lg:col-span-7 pm-card rounded-3xl p-6 flex flex-col justify-between">
-                    <div class="flex items-center justify-between mb-4">
-                        <div>
-                            <h3 class="text-lg font-bold text-slate-900">Répartition des Effectifs par Pôle</h3>
-                            <p class="text-xs text-slate-600">55 affectations réparties sur les 11 unités opérationnelles</p>
+                    <!-- Pasteur Samuel EBOUMBOU -->
+                    <div class="p-3.5 bg-slate-50/60 rounded-2xl border border-slate-200 flex items-center justify-between gap-3">
+                        <div class="flex items-center gap-3.5">
+                            <div class="w-16 h-16 rounded-xl overflow-hidden shadow-sm shrink-0 bg-slate-200 border border-slate-300/60">
+                                <img src="images/P1140346.jpg" alt="Pasteur Samuel EBOUMBOU" class="w-full h-full object-cover object-top">
+                            </div>
+                            <div>
+                                <div class="text-sm font-bold text-slate-900">Pasteur Samuel EBOUMBOU</div>
+                                <div class="text-xs text-amber-500 font-semibold">Supervision Spirituelle</div>
+                            </div>
                         </div>
-                        <span class="text-xs bg-slate-100 border border-slate-200 px-3 py-1 rounded-full text-slate-700">Saison 2026-2027</span>
+                        <span class="px-2.5 py-1 rounded bg-amber-500/20 text-amber-500 text-[10px] font-bold shrink-0">BERGER</span>
                     </div>
 
-                    <div class="chart-container">
-                        <canvas id="polesDistributionChart"></canvas>
+                    <!-- Emmanuella GBEKOU -->
+                    <div class="p-3.5 bg-slate-50/60 rounded-2xl border border-slate-200 flex items-center justify-between gap-3">
+                        <div class="flex items-center gap-3.5">
+                            <div class="w-16 h-16 rounded-xl overflow-hidden shadow-sm shrink-0 bg-slate-200 border border-slate-300/60">
+                                <img src="images/emma.jpg" alt="Emmanuella GBEKOU" class="w-full h-full object-cover object-top">
+                            </div>
+                            <div>
+                                <div class="text-sm font-bold text-slate-900">Emmanuella GBEKOU</div>
+                                <div class="text-xs text-brand-red font-semibold">Responsable Principale</div>
+                            </div>
+                        </div>
+                        <span class="px-2.5 py-1 rounded bg-brand-red/20 text-brand-red text-[10px] font-bold shrink-0">RESPONSABLE</span>
                     </div>
+
+                    <!-- Grille des Responsables de Pôles avec photos -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1">
+                        <!-- Stéphane ZOA -->
+                        <div class="bg-slate-50/40 p-3 rounded-xl border border-slate-200 flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-lg overflow-hidden shrink-0 bg-slate-200 border border-slate-300/50">
+                                <img src="images/steph.jpg" alt="Stéphane ZOA" class="w-full h-full object-cover object-top">
+                            </div>
+                            <div>
+                                <div class="text-[11px] text-slate-500 font-medium">Responsable musiciens</div>
+                                <div class="text-xs font-bold text-slate-900">Stéphane ZOA</div>
+                            </div>
+                        </div>
+
+                        <!-- Aurore SOBNGWI -->
+                        <div class="bg-slate-50/40 p-3 rounded-xl border border-slate-200 flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-lg overflow-hidden shrink-0 bg-slate-200 border border-slate-300/50">
+                                <img src="images/Aurore.jpg" alt="Aurore SOBNGWI" class="w-full h-full object-cover object-top">
+                            </div>
+                            <div>
+                                <div class="text-[11px] text-slate-500 font-medium">Responsable formation</div>
+                                <div class="text-xs font-bold text-slate-900">Aurore SOBNGWI</div>
+                            </div>
+                        </div>
+
+                        <!-- Joseph ZOUHONGBE -->
+                        <div class="bg-slate-50/40 p-3 rounded-xl border border-slate-200 flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-lg overflow-hidden shrink-0 bg-slate-200 border border-slate-300/50">
+                                <img src="images/joseph.jpg" alt="Joseph ZOUHONGBE" class="w-full h-full object-cover object-top">
+                            </div>
+                            <div>
+                                <div class="text-[11px] text-slate-500 font-medium">Vie spirituelle</div>
+                                <div class="text-xs font-bold text-slate-900">Joseph ZOUHONGBE</div>
+                            </div>
+                        </div>
+
+                        <!-- Leslie TENYONG -->
+                        <div class="bg-slate-50/40 p-3 rounded-xl border border-slate-200 flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-lg overflow-hidden shrink-0 bg-slate-200 border border-slate-300/50">
+                                <img src="images/leslie.jpg" alt="Leslie TENYONG" class="w-full h-full object-cover object-top">
+                            </div>
+                            <div>
+                                <div class="text-[11px] text-slate-500 font-medium">Orga. & Events</div>
+                                <div class="text-xs font-bold text-slate-900">Leslie TENYONG</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        </div>
+
+        <!-- CÔTÉ DROIT : Distribution Chart Card (7 colonnes) -->
+        <div class="lg:col-span-7 pm-card rounded-3xl p-6 flex flex-col justify-between">
+            <div>
+                <div class="flex items-center justify-between mb-4">
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">Répartition des Effectifs par Pôle</h3>
+                        <p class="text-xs text-slate-600">55 affectations réparties sur les 11 unités opérationnelles</p>
+                    </div>
+                    <span class="text-xs bg-slate-100 border border-slate-200 px-3 py-1 rounded-full text-slate-700">Saison 2026-2027</span>
+                </div>
+
+                <div class="chart-container w-full h-[320px] sm:h-[400px]">
+                    <canvas id="polesDistributionChart"></canvas>
                 </div>
             </div>
+        </div>
+
+    </div>
+
 
             <!-- Dynamic Poles Grid -->
             <div>
@@ -581,6 +576,7 @@
                     <!-- Dynamic -->
                 </div>
             </div>
+            
 
             <!-- Visual Hierarchical Tree Graph -->
             <div class="pm-card p-6 sm:p-10 rounded-3xl overflow-x-auto">
@@ -687,31 +683,33 @@
         </section>
 
         <!-- SECTION 3: RECRUTEMENT & AUDITIONS -->
-        <section id="section-recrutement" class="hidden space-y-8">
-           <div class="relative overflow-hidden rounded-3xl border border-amber-500/30 p-6 sm:p-10 shadow-2xl min-h-[220px] flex items-center">
+      <section id="section-recrutement" class="hidden space-y-8">
+    <div class="relative overflow-hidden rounded-3xl border border-amber-500/30 p-8 sm:p-14 shadow-2xl min-h-[380px] sm:min-h-[440px] flex items-center">
     
-    <!-- 1. IMAGE DE FOND -->
-    <img 
-        src="images/IMG_9768.jpg" 
-        alt="Rejoindre Prodiges Musique" 
-        class="absolute inset-0 w-full h-full object-cover object-center z-0"
-    />
+        <!-- 1. IMAGE DE FOND -->
+        <img 
+            src="images/IMG_9768.jpg" 
+            alt="Rejoindre Prodiges Musique" 
+            class="absolute inset-0 w-full h-full object-cover object-center z-0"
+        />
 
-    <!-- 2. CALQUE D'ASSOMBRISSEMENT (OVERLAY DÉGRADÉ) -->
-    <!-- Ce dégradé assombrit le fond tout en conservant les tons chauds du thème -->
-    <div class="absolute inset-0 bg-gradient-to-r from-black/50 via-black/50 to-black/60 backdrop-blur-[1px] z-0"></div>
+        <!-- 2. CALQUE D'ASSOMBRISSEMENT (OVERLAY DÉGRADÉ) -->
+        <div class="absolute inset-0 bg-gradient-to-r from-black/60 via-black/50 to-black/60 backdrop-blur-[1px] z-0"></div>
 
-    <!-- 3. CONTENU (Rendu au-dessus grâce à z-10 et adapté aux couleurs sombres) -->
-    <div class="relative z-10 max-w-3xl space-y-3">
-        <!-- <span class="px-3 py-1 rounded-full bg-amber-500/20 text-amber-400 border border-amber-500/30 text-xs font-bold uppercase">
-            <i class="fa-solid fa-microphone"></i> Candidatures Externes & Internes
-        </span> -->
-        <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-white">Rejoindre Prodiges Musique</h2>
-        <p class="text-xs sm:text-sm text-slate-200 leading-relaxed">
-            Le recrutement au sein du ministère de louange PM s'effectue <strong class="text-amber-400">tous les 6 mois (2 fois par an)</strong>. Découvrez le processus rigoureux visant à valider l'alignement spirituel, technique et l'engagement de chaque chantre et musicien.
-        </p>
+        <!-- 3. CONTENU -->
+        <div class="relative z-10 max-w-3xl space-y-4 sm:space-y-6">
+            <!-- <span class="px-3 py-1 rounded-full bg-amber-500/20 text-amber-400 border border-amber-500/30 text-xs font-bold uppercase">
+                <i class="fa-solid fa-microphone"></i> Candidatures Externes & Internes
+            </span> -->
+            <h2 class="text-3xl sm:text-5xl font-display font-extrabold text-white leading-tight">
+                Rejoindre Prodiges Musique
+            </h2>
+            <p class="text-sm sm:text-base text-slate-200 leading-relaxed">
+                Le recrutement au sein du ministère de louange PM s'effectue <strong class="text-amber-400">tous les 6 mois (2 fois par an)</strong>. Découvrez le processus rigoureux visant à valider l'alignement spirituel, technique et l'engagement de chaque chantre et musicien.
+            </p>
+        </div>
     </div>
-</div>
+
 
             <!-- Pipeline Steps (5 Steps) -->
             <div>
@@ -882,15 +880,28 @@
                 <!-- Table View -->
                 <div class="overflow-x-auto">
                     <table class="w-full text-left border-collapse">
-                        <thead>
-                            <tr class="text-[11px] font-extrabold uppercase tracking-widest text-slate-500 border-b border-slate-200 pb-3">
-                                <th class="pb-3 px-4">Serviteur / Servante</th>
-                                <th class="pb-3 px-4">Sexe</th>
-                                <th class="pb-3 px-4">Pupitre / Instrument</th>
-                                <th class="pb-3 px-4">Pôles & Rôles</th>
-                                <th class="pb-3 px-4">Fonctions Cumulées</th>
-                            </tr>
-                        </thead>
+                       <thead>
+    <tr class="text-[11px] font-extrabold uppercase tracking-widest text-slate-500 border-b border-slate-200 pb-3 select-none">
+        <!-- Colonne Nom (Cliquable) -->
+        <th class="pb-3 px-4 cursor-pointer hover:text-slate-900 transition" onclick="sortTableByColumn('nom')">
+            Serviteur / Servante <i id="sort-icon-nom" class="fa-solid fa-sort ml-1 text-slate-400"></i>
+        </th>
+        
+        <th class="pb-3 px-4">Sexe</th>
+        
+        <!-- Colonne Pupitre (Cliquable) -->
+        <th class="pb-3 px-4 cursor-pointer hover:text-slate-900 transition" onclick="sortTableByColumn('instrument')">
+            Pupitre / Instrument <i id="sort-icon-instrument" class="fa-solid fa-sort ml-1 text-slate-400"></i>
+        </th>
+        
+        <!-- Colonne Pôles (Cliquable) -->
+        <th class="pb-3 px-4 cursor-pointer hover:text-slate-900 transition" onclick="sortTableByColumn('pole')">
+            Pôles & Rôles <i id="sort-icon-pole" class="fa-solid fa-sort ml-1 text-slate-400"></i>
+        </th>
+        
+        <th class="pb-3 px-4">Fonctions Cumulées</th>
+    </tr>
+</thead>
                         <tbody id="directoryTableBody" class="divide-y divide-slate-200 text-xs">
                             <!-- Dynamically generated -->
                         </tbody>
@@ -1602,9 +1613,122 @@ function getSexeBadge(sexe) {
             renderDirectory();
         }
 
-        function filterDirectory() {
-            renderDirectory();
+       // Variable d'état pour garder en mémoire la colonne active et le sens du tri
+let currentSortColumn = 'nom'; // Par défaut tri par nom
+let currentSortDirection = 'asc'; // 'asc' pour A-Z, 'desc' pour Z-A
+
+/**
+ * Fonction appelée lors du clic sur une colonne
+ */
+function sortTableByColumn(columnKey) {
+    if (currentSortColumn === columnKey) {
+        // Inverser la direction si on clique sur la même colonne
+        currentSortDirection = currentSortDirection === 'asc' ? 'desc' : 'asc';
+    } else {
+        // Nouvelle colonne sélectionnée, par défaut A-Z
+        currentSortColumn = columnKey;
+        currentSortDirection = 'asc';
+    }
+
+    // Mettre à jour les icônes de la table
+    updateSortIcons();
+
+    // Ré-appliquer le filtre et le tri
+    filterDirectory();
+}
+
+/**
+ * Met à jour les icônes FontAwesome (fleches haut/bas) dans les en-têtes
+ */
+function updateSortIcons() {
+    const columns = ['nom', 'instrument', 'pole'];
+
+    columns.forEach(col => {
+        const icon = document.getElementById(`sort-icon-${col}`);
+        if (!icon) return;
+
+        if (col === currentSortColumn) {
+            icon.className = currentSortDirection === 'asc' 
+                ? 'fa-solid fa-sort-up ml-1 text-brand-red' 
+                : 'fa-solid fa-sort-down ml-1 text-brand-red';
+        } else {
+            icon.className = 'fa-solid fa-sort ml-1 text-slate-400';
         }
+    });
+}
+
+/**
+ * Votre fonction d'affichage principale mise à jour avec le tri dynamique
+ */
+function filterDirectory() {
+    const searchVal = (document.getElementById('memberSearchInput')?.value || '').toLowerCase();
+    const poleVal = document.getElementById('poleFilterSelect')?.value || '';
+    const pupitreVal = (document.getElementById('pupitreFilterSelect')?.value || '').toLowerCase();
+
+    let filtered = uniqueMembers.filter(m => {
+        const matchesSearch = m.name.toLowerCase().includes(searchVal) ||
+            m.pupitre.toLowerCase().includes(searchVal) ||
+            m.roles.some(r => r.pole.toLowerCase().includes(searchVal) || r.role.toLowerCase().includes(searchVal));
+        const matchesPole = !poleVal || m.roles.some(r => r.pole === poleVal);
+        const matchesPupitre = !pupitreVal || m.pupitre.toLowerCase().includes(pupitreVal);
+        return matchesSearch && matchesPole && matchesPupitre;
+    });
+
+    filtered.sort((a, b) => {
+        let valA, valB;
+        if (currentSortColumn === 'nom') { valA = a.nom; valB = b.nom; }
+        else if (currentSortColumn === 'instrument') { valA = a.pupitre; valB = b.pupitre; }
+        else { valA = a.roles[0]?.pole || ''; valB = b.roles[0]?.pole || ''; }
+        const cmp = valA.localeCompare(valB, 'fr', { sensitivity: 'base' });
+        return currentSortDirection === 'asc' ? cmp : -cmp;
+    });
+
+    document.getElementById('directoryCounter').textContent = filtered.length;
+
+    document.getElementById('directoryTableBody').innerHTML = filtered.map(m => {
+        const hasRoles = m.roles && m.roles.length > 0;
+        const firstRole = hasRoles ? m.roles[0] : { role: "Membre", pole: "Général" };
+        const hasMultiple = m.roles.length > 1;
+        return `
+            <tr class="hover:bg-slate-100 transition-colors group">
+                <td class="py-4 px-4 font-bold text-slate-900 flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-full bg-brand-red/20 text-brand-red border border-brand-red/30 flex items-center justify-center font-bold text-xs">${m.name[0]}</div>
+                    <div>${m.name}</div>
+                </td>
+                <td class="py-4 px-4 text-center">${getSexeBadge(m.sexe)}</td>
+                <td class="py-4 px-4"><div class="flex flex-wrap gap-1">${getPupitreBadge(m.pupitre)}</div></td>
+                <td class="py-4 px-4">
+                    <div class="text-slate-900 font-semibold">${firstRole.role}</div>
+                    <div class="text-[10px] text-brand-red uppercase font-bold tracking-wider">${firstRole.pole}</div>
+                </td>
+                <td class="py-4 px-4">
+                    ${hasMultiple ? `<span class="px-2.5 py-1 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20 text-[10px] font-bold">Cumule ${m.roles.length} rôles</span>` : '<span class="text-slate-600 text-[11px]">—</span>'}
+                </td>
+                <td class="py-4 px-4 text-right">
+                    <button onclick="openMemberModal('${m.name.replace(/'/g, "\\'")}')" class="px-3 py-1.5 rounded-xl bg-slate-100 hover:bg-brand-red hover:text-slate-900 text-slate-700 font-bold transition text-xs">Fiche</button>
+                </td>
+            </tr>
+        `;
+    }).join('');
+}
+
+        function sortDirectoryTableAlphabetically() {
+    const tbody = document.getElementById('directoryTableBody');
+    if (!tbody) return;
+
+    const rows = Array.from(tbody.querySelectorAll('tr'));
+
+    rows.sort((rowA, rowB) => {
+        // Récupère le texte de la 1ère colonne (Serviteur / Servante)
+        const cellA = rowA.cells[0]?.textContent.trim() || '';
+        const cellB = rowB.cells[0]?.textContent.trim() || '';
+        
+        return cellA.localeCompare(cellB, 'fr', { sensitivity: 'base' });
+    });
+
+    // Ré-insère les lignes triées dans le tbody
+    rows.forEach(row => tbody.appendChild(row));
+}
 
         function filterPoles() {
             const query = document.getElementById('poleSearchInput').value.toLowerCase();
