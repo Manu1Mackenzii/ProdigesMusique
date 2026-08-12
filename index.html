@@ -157,70 +157,69 @@
 
         
 
-        <!-- SECTION 1: VISION, MOT DU BERGER & VALEURS -->
-        <section id="section-vision" class="space-y-8">
+       <!-- SECTION 1: VISION, MOT DU BERGER & VALEURS -->
+<section id="section-vision" class="space-y-8">
 
-           <!-- HERO BANNER -->
-<div class="relative overflow-hidden rounded-3xl border border-slate-200 p-6 sm:p-10 shadow-2xl min-h-[400px]">
+    <!-- HERO BANNER -->
+<div class="relative w-full overflow-hidden rounded-3xl border border-slate-200/20 p-6 sm:p-10 md:p-12 shadow-2xl min-h-[400px] flex items-center">
     
     <!-- 1. IMAGE DE FOND -->
     <img 
-      src="images/tous.jpeg" 
-      alt="Fond Hero Prodiges Musique" 
-      class="absolute inset-0 w-full h-full object-cover object-center z-0"
+        src="images/tous.jpeg" 
+        alt="Fond Hero Prodiges Musique" 
+        class="absolute inset-0 w-full h-full object-cover object-center z-0"
     />
 
-    <!-- 2. CALQUE DE NOIRCISSEMENT (OVERLAY) -->
-    <!-- Ajustez bg-black/50 (50% de noir) si vous voulez plus ou moins sombre -->
-    <div class="absolute inset-0 bg-black/50 backdrop-blur-[1px] z-0"></div>
+    <!-- 2. CALQUE D'ASSOMBRISSEMENT (OVERLAY) -->
+    <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/75 to-black/40 z-0"></div>
 
-    <!-- EFFETS DE DÉGRADÉ & DÉCORATION -->
-    <div class="absolute -right-10 -bottom-10 w-72 h-72 bg-brand-red/20 rounded-full blur-3xl pointer-events-none z-0"></div>
-    <!-- <div class="absolute top-4 right-8 text-white/5 text-9xl pointer-events-none font-black font-display z-0">PM</div> -->
-
-    <!-- CONTENU PRINCIPAL (Placé au-dessus avec z-10) -->
-    <div class="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-8">
-        <div class="space-y-4 max-w-3xl">
-           
-            <div class="bg-white/95 backdrop-blur-md p-8 rounded-3xl shadow-xl border border-slate-200/80 max-w-3xl mx-auto text-center">
-              <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-3">
+    <!-- 3. CONTENU EN SURIMPRESSION -->
+    <div class="relative z-10 w-full space-y-6">
+        
+        <!-- Haut : Titre et textes -->
+        <div class="space-y-4">
+            <h1 class="text-3xl sm:text-5xl font-display font-extrabold text-white leading-tight drop-shadow-md max-w-2xl uppercase">
                 PORTAIL OFFICIEL PRODIGES MUSIQUE
-              </h1>
-              
-              <p class="text-amber-600 font-medium italic mb-4">
+            </h1>
+            <p class="text-amber-400 font-medium italic text-base sm:text-lg drop-shadow w-full">
                 « Ramener le cœur des jeunes au cœur de Dieu par la puissance de la louange et de l'adoration prophétique. »
-              </p>
-              
-              <p class="text-slate-700 text-sm sm:text-base leading-relaxed">
+            </p>
+            <p class="text-slate-100 text-sm sm:text-base leading-relaxed drop-shadow w-full max-w-4xl">
                 Bienvenue sur la plateforme centrale d'information, de recrutement et de coordination de Prodiges Musique, le ministère de louange de l'Église des Jeunes Prodiges (EJP / ICC).
-              </p>
-            </div>
+            </p>
+        </div>
+
+        <!-- Bas : Boutons à gauche + Stats Panel à droite -->
+        <div class="pt-4 flex flex-col lg:flex-row lg:items-end justify-between gap-6">
             
-            <div class="flex flex-wrap gap-3 pt-2">
-                <button onclick="showSection('recrutement')" class="bg-red-500 hover:bg-red-600 text-white font-bold px-5 py-2.5 rounded-xl text-xs transition flex items-center gap-2 shadow-lg shadow-red-500/30">
+            <!-- Boutons (Gauche) -->
+            <div class="flex flex-wrap gap-3">
+                <button onclick="showSection('recrutement')" class="bg-red-600 hover:bg-red-700 text-white font-bold px-6 py-3 rounded-xl text-xs sm:text-sm transition flex items-center gap-2 shadow-lg shadow-red-600/30">
                     <i class="fa-solid fa-user-plus"></i> Postuler aux Auditions
                 </button>
-                <button onclick="showSection('vision')" class="bg-white/10 hover:bg-white/20 text-white border border-white/20 backdrop-blur-md font-bold px-5 py-2.5 rounded-xl text-xs transition flex items-center gap-2">
+                <button onclick="showSection('vision')" class="bg-white/10 hover:bg-white/20 text-white border border-white/20 backdrop-blur-md font-bold px-6 py-3 rounded-xl text-xs sm:text-sm transition flex items-center gap-2">
                     <i class="fa-solid fa-book-open"></i> Découvrir la Vision & Mot du Berger
                 </button>
             </div>
+
+            <!-- Stats Panel (Dynamique) -->
+<div class="grid grid-cols-3 gap-3 sm:gap-4 bg-black/40 p-4 sm:p-5 rounded-2xl border border-white/10 backdrop-blur-md min-w-[280px] shrink-0">
+    <div class="text-center px-2">
+        <div class="text-2xl sm:text-3xl font-display font-extrabold text-white" id="statPolesCount">0</div>
+        <div class="text-[10px] sm:text-xs font-semibold text-red-400 uppercase tracking-wider mt-1">Pôles</div>
+    </div>
+    <div class="text-center px-2 border-x border-white/10">
+        <div class="text-2xl sm:text-3xl font-display font-extrabold text-amber-400" id="statMembersCount">0</div>
+        <div class="text-[10px] sm:text-xs font-semibold text-slate-300 uppercase tracking-wider mt-1">Membres</div>
+    </div>
+    <div class="text-center px-2">
+        <div class="text-2xl sm:text-3xl font-display font-extrabold text-white" id="statRolesCount">0</div>
+        <div class="text-[10px] sm:text-xs font-semibold text-slate-300 uppercase tracking-wider mt-1">Services</div>
+    </div>
+</div>
+
         </div>
 
-        <!-- Stats Panel -->
-        <div class="grid grid-cols-3 gap-3 sm:gap-4 bg-black/40 p-5 rounded-3xl border border-white/10 backdrop-blur-md min-w-[280px]">
-            <div class="text-center px-2">
-                <div class="text-2xl sm:text-4xl font-display font-extrabold text-white" id="statPolesCount">09</div>
-                <div class="text-[10px] sm:text-xs font-semibold text-red-400 uppercase tracking-wider mt-1">Pôles</div>
-            </div>
-            <div class="text-center px-2 border-x border-white/10">
-                <div class="text-2xl sm:text-4xl font-display font-extrabold text-amber-400" id="statMembersCount">66</div>
-                <div class="text-[10px] sm:text-xs font-semibold text-slate-300 uppercase tracking-wider mt-1">Membres</div>
-            </div>
-            <div class="text-center px-2">
-                <div class="text-2xl sm:text-4xl font-display font-extrabold text-white" id="statRolesCount">55</div>
-                <div class="text-[10px] sm:text-xs font-semibold text-slate-300 uppercase tracking-wider mt-1">Services</div>
-            </div>
-        </div>
     </div>
 </div>
             
@@ -347,60 +346,60 @@
         <h2 class="text-2xl sm:text-3xl font-display font-extrabold text-slate-900 mt-1">Nos 5 Valeurs Fondamentales</h2>
     </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
         
-        <!-- Valeur 1: Cœur de Dieu -->
-        <div class="pm-card p-5 rounded-2xl space-y-2 text-center flex flex-col items-center">
-            <!-- Image agrandie (w-24 h-24 sm:w-28 sm:h-28) -->
-            <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden mb-3 shadow-md border-2 border-brand-red/10 shrink-0">
-                <img src="images/coeur.jpeg" alt="Cœur de Dieu" class="w-full h-full object-cover" />
-            </div>
-            <h4 class="text-sm font-bold text-slate-900">Cœur de Dieu</h4>
-            <p class="text-[11px] text-slate-600 leading-normal">Premier désir: le cœur de Dieu et la conformité à Christ.</p>
-            <span class="inline-block text-[10px] font-bold text-brand-red bg-brand-red/10 px-2 py-0.5 rounded">Galates 5:22-23</span>
+    <!-- Valeur 1: Cœur de Dieu -->
+    <div class="pm-card p-6 rounded-2xl space-y-3 text-center flex flex-col items-center">
+        <!-- Image agrandie (w-36 h-36 sur mobile, w-44 h-44 sur écran sm+) -->
+        <div class="w-36 h-36 sm:w-44 sm:h-44 rounded-2xl overflow-hidden mb-2 shadow-lg border-2 border-brand-red/10 shrink-0">
+            <img src="images/coeur.jpeg" alt="Cœur de Dieu" class="w-full h-full object-cover" />
         </div>
-
-        <!-- Valeur 2: Parole de Dieu -->
-        <div class="pm-card p-5 rounded-2xl space-y-2 text-center flex flex-col items-center">
-            <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden mb-3 shadow-md border-2 border-amber-500/10 shrink-0">
-                <img src="images/parole.JPG" alt="Parole de Dieu" class="w-full h-full object-cover" />
-            </div>
-            <h4 class="text-sm font-bold text-slate-900">Parole de Dieu</h4>
-            <p class="text-[11px] text-slate-600 leading-normal">Composé de jeunes consistants et assis dans la Parole.</p>
-            <span class="inline-block text-[10px] font-bold text-amber-500 bg-amber-500/10 px-2 py-0.5 rounded">Josué 1:8</span>
-        </div>
-
-        <!-- Valeur 3: Unité -->
-        <div class="pm-card p-5 rounded-2xl space-y-2 text-center flex flex-col items-center">
-            <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden mb-3 shadow-md border-2 border-indigo-500/10 shrink-0">
-                <img src="images/touss.jpeg" alt="Unité" class="w-full h-full object-cover" />
-            </div>
-            <h4 class="text-sm font-bold text-slate-900">Unité</h4>
-            <p class="text-[11px] text-slate-600 leading-normal">Avancer ensemble dans un même esprit et une même vision.</p>
-            <span class="inline-block text-[10px] font-bold text-indigo-500 bg-indigo-500/10 px-2 py-0.5 rounded">Jean 17:21</span>
-        </div>
-
-        <!-- Valeur 4: Consécration -->
-        <div class="pm-card p-5 rounded-2xl space-y-2 text-center flex flex-col items-center">
-            <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden mb-3 shadow-md border-2 border-emerald-500/10 shrink-0">
-                <img src="images/conse.jpg" alt="Consécration" class="w-full h-full object-cover" />
-            </div>
-            <h4 class="text-sm font-bold text-slate-900">Consécration</h4>
-            <p class="text-[11px] text-slate-600 leading-normal">Se donner pleinement à Dieu dans notre intimité et notre service.</p>
-            <span class="inline-block text-[10px] font-bold text-emerald-500 bg-emerald-500/10 px-2 py-0.5 rounded">Nombres 8:14</span>
-        </div>
-
-        <!-- Valeur 5: Excellence -->
-        <div class="pm-card p-5 rounded-2xl space-y-2 text-center sm:col-span-2 lg:col-span-1 flex flex-col items-center">
-            <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden mb-3 shadow-md border-2 border-purple-500/10 shrink-0">
-                <img src="images/exel.jpeg" alt="Excellence" class="w-full h-full object-cover" />
-            </div>
-            <h4 class="text-sm font-bold text-slate-900">Excellence</h4>
-            <p class="text-[11px] text-slate-600 leading-normal">Aspirer constantly à rendre un service excellent à Dieu.</p>
-            <span class="inline-block text-[10px] font-bold text-purple-500 bg-purple-500/10 px-2 py-0.5 rounded">1 Chron. 25:7</span>
-        </div>
-
+        <h4 class="text-base font-bold text-slate-900">Cœur de Dieu</h4>
+        <p class="text-xs text-slate-600 leading-relaxed flex-grow">Premier désir: le cœur de Dieu et la conformité à Christ.</p>
+        <span class="inline-block text-[10px] font-bold text-brand-red bg-brand-red/10 px-2.5 py-1 rounded-full">Galates 5:22-23</span>
     </div>
+
+    <!-- Valeur 2: Parole de Dieu -->
+    <div class="pm-card p-6 rounded-2xl space-y-3 text-center flex flex-col items-center">
+        <div class="w-36 h-36 sm:w-44 sm:h-44 rounded-2xl overflow-hidden mb-2 shadow-lg border-2 border-amber-500/10 shrink-0">
+            <img src="images/parole.JPG" alt="Parole de Dieu" class="w-full h-full object-cover" />
+        </div>
+        <h4 class="text-base font-bold text-slate-900">Parole de Dieu</h4>
+        <p class="text-xs text-slate-600 leading-relaxed flex-grow">Composé de jeunes consistants et assis dans la Parole.</p>
+        <span class="inline-block text-[10px] font-bold text-amber-500 bg-amber-500/10 px-2.5 py-1 rounded-full">Josué 1:8</span>
+    </div>
+
+    <!-- Valeur 3: Unité -->
+    <div class="pm-card p-6 rounded-2xl space-y-3 text-center flex flex-col items-center">
+        <div class="w-36 h-36 sm:w-44 sm:h-44 rounded-2xl overflow-hidden mb-2 shadow-lg border-2 border-indigo-500/10 shrink-0">
+            <img src="images/touss.jpeg" alt="Unité" class="w-full h-full object-cover" />
+        </div>
+        <h4 class="text-base font-bold text-slate-900">Unité</h4>
+        <p class="text-xs text-slate-600 leading-relaxed flex-grow">Avancer ensemble dans un même esprit et une même vision.</p>
+        <span class="inline-block text-[10px] font-bold text-indigo-500 bg-indigo-500/10 px-2.5 py-1 rounded-full">Jean 17:21</span>
+    </div>
+
+    <!-- Valeur 4: Consécration -->
+    <div class="pm-card p-6 rounded-2xl space-y-3 text-center flex flex-col items-center">
+        <div class="w-36 h-36 sm:w-44 sm:h-44 rounded-2xl overflow-hidden mb-2 shadow-lg border-2 border-emerald-500/10 shrink-0">
+            <img src="images/conse.jpg" alt="Consécration" class="w-full h-full object-cover" />
+        </div>
+        <h4 class="text-base font-bold text-slate-900">Consécration</h4>
+        <p class="text-xs text-slate-600 leading-relaxed flex-grow">Se donner pleinement à Dieu dans notre intimité et notre service.</p>
+        <span class="inline-block text-[10px] font-bold text-emerald-500 bg-emerald-500/10 px-2.5 py-1 rounded-full">Nombres 8:14</span>
+    </div>
+
+    <!-- Valeur 5: Excellence -->
+    <div class="pm-card p-6 rounded-2xl space-y-3 text-center sm:col-span-2 lg:col-span-1 flex flex-col items-center">
+        <div class="w-36 h-36 sm:w-44 sm:h-44 rounded-2xl overflow-hidden mb-2 shadow-lg border-2 border-purple-500/10 shrink-0">
+            <img src="images/P1022783.jpeg" alt="Excellence" class="w-full h-full object-cover" />
+        </div>
+        <h4 class="text-base font-bold text-slate-900">Excellence</h4>
+        <p class="text-xs text-slate-600 leading-relaxed flex-grow">Aspirer constamment à rendre un service excellent à Dieu.</p>
+        <span class="inline-block text-[10px] font-bold text-purple-500 bg-purple-500/10 px-2.5 py-1 rounded-full">1 Chron. 25:7</span>
+    </div>
+
+</div>
 </div>
 
             <!-- Notre Mission & Biblique -->
@@ -686,22 +685,25 @@
 <section id="section-recrutement" class="hidden space-y-8">
     <div class="relative overflow-hidden rounded-3xl border border-amber-500/30 p-8 sm:p-14 shadow-2xl min-h-[380px] sm:min-h-[440px] flex items-center">
     
-        <!-- 1. IMAGE DE FOND (Ajustée vers la droite et légèrement descendue) -->
+        <!-- 1. IMAGE DE FOND -->
         <img 
             src="images/IMG_9768.jpg" 
             alt="Rejoindre Prodiges Musique" 
             class="absolute inset-0 w-full h-full object-cover object-[100%_50%] z-0"
         />
 
-        <!-- 2. CALQUE D'ASSOMBRISSEMENT (Ombre concentrée à gauche, image nette à droite) -->
-        <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/40 via-40% to-transparent z-0"></div>
+        <!-- 2. CALQUE D'ASSOMBRISSEMENT (Ombre progressive adaptée à la pleine largeur) -->
+        <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-black/30 z-0"></div>
 
         <!-- 3. CONTENU -->
-        <div class="relative z-10 max-w-xl space-y-4 sm:space-y-6">
-            <h2 class="text-3xl sm:text-5xl font-display font-extrabold text-white leading-tight drop-shadow-md">
+        <div class="relative z-10 w-full space-y-4 sm:space-y-6">
+            <!-- Le titre garde sa largeur d'origine (max-w-xl) -->
+            <h2 class="text-3xl sm:text-5xl font-display font-extrabold text-white leading-tight drop-shadow-md max-w-xl">
                 Rejoindre Prodiges Musique
             </h2>
-            <p class="text-sm sm:text-base text-slate-100 leading-relaxed drop-shadow">
+            
+            <!-- Le paragraphe prend toute la largeur disponible (w-full) -->
+            <p class="text-sm sm:text-base text-slate-100 leading-relaxed drop-shadow w-full">
                 Le recrutement au sein du ministère de louange PM s'effectue <strong class="text-amber-400">tous les 6 mois (2 fois par an)</strong>. Découvrez le processus rigoureux visant à valider l'alignement spirituel, technique et l'engagement de chaque chantre et musicien.
             </p>
         </div>
@@ -1737,6 +1739,44 @@ function filterDirectory() {
                 }
             });
         }
+
+        // Fonction pour animer le compteur dynamiquement
+function animateCounter(elementId, targetValue, padZero = false, duration = 1500) {
+    const element = document.getElementById(elementId);
+    if (!element) return;
+
+    let startTimestamp = null;
+    const step = (timestamp) => {
+        if (!startTimestamp) startTimestamp = timestamp;
+        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+        
+        // Calcul de la valeur courante avec un effet de ralentissement à la fin (easeOut)
+        const currentValue = Math.floor(progress * targetValue);
+        
+        // Formatage avec zéro initial si demandé (ex: 09 au lieu de 9)
+        element.textContent = padZero && currentValue < 10 ? `0${currentValue}` : currentValue;
+
+        if (progress < 1) {
+            window.requestAnimationFrame(step);
+        } else {
+            element.textContent = padZero && targetValue < 10 ? `0${targetValue}` : targetValue;
+        }
+    };
+    window.requestAnimationFrame(step);
+}
+
+// Fonction globale pour mettre à jour les statistiques à tout moment
+function updateStats(poles, membres, services) {
+    animateCounter('statPolesCount', poles, true);      // Zéro initial (ex: 09)
+    animateCounter('statMembersCount', membres, false); // Pas de zéro initial (ex: 66)
+    animateCounter('statRolesCount', services, false);  // Pas de zéro initial (ex: 55)
+}
+
+// Lancement automatique des compteurs au chargement de la page
+document.addEventListener('DOMContentLoaded', () => {
+    // Vous pouvez remplacer ces chiffres par des variables venues d'une API ou d'une base de données
+    updateStats(9, 66, 55);
+});
 
         function filterCalendar(type) {
             const items = document.querySelectorAll('.calendar-item');
