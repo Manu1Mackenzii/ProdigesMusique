@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prodiges Musique — Portail Officiel, Vision & Organigramme 2026-2027</title>
+    <title>Prodiges Musique — Portail Officiel</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Chart.js -->
@@ -83,81 +83,75 @@
 </head>
 <body class="min-h-screen font-sans selection:bg-brand-red selection:text-slate-900 flex flex-col">
 
-    <!-- NAVBAR -->
-    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 no-print">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
-            
-            <!-- Logo Section -->
-            <div class="flex items-center gap-3 cursor-pointer" onclick="showSection('vision')">
-                <div class="relative w-12 h-12 bg-slate-50 border border-slate-200 rounded-xl p-1.5 flex items-center justify-center shadow-lg">
-                    <div class="w-12 h-12 rounded-xl overflow-hidden bg-black shadow-md border border-slate-800 shrink-0">
-    <img 
-      src="images/PMCouleur.png" 
-      alt="Logo Prodiges Musique" 
-      class="w-full h-full object-cover"
-    />
-  </div>
-                    <svg viewBox="0 0 100 100" class="w-full h-full">
-                        <path d="M 20 15 L 50 15 C 65 15 65 40 50 40 L 35 40 L 35 85 L 20 85 Z" fill="#0f172a"/>
-                        <polygon points="37,22 40,28 46,30 40,32 37,38 34,32 28,30 34,28" fill="#D32F2F"/>
-                        <path d="M 45 42 L 58 20 L 72 45 L 85 20 L 85 85 L 72 85 L 72 45 L 58 70 L 45 45 Z" fill="#D32F2F"/>
-                    </svg>
-                </div>
-                <div>
-                    <div class="font-display font-extrabold text-xl tracking-wider text-slate-900 flex items-center gap-1.5">
-                        PRODIGES
-                        <span class="w-2 h-2 rounded-full bg-brand-red animate-pulse"></span>
-                    </div>
-                    <div class="text-xs font-bold tracking-[0.35em] text-brand-red uppercase">MUSIQUE</div>
-                </div>
+   <!-- NAVBAR -->
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 no-print">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between gap-4 lg:gap-8">
+        
+        <!-- Logo Section (GAUCHE) -->
+        <div class="flex items-center gap-3 cursor-pointer shrink-0" onclick="showSection('vision')">
+            <!-- Icone Logo -->
+            <div class="w-12 h-12 rounded-xl overflow-hidden bg-black shadow-md border border-slate-800 shrink-0">
+                <img 
+                    src="images/PMCouleur.png" 
+                    alt="Logo Prodiges Musique" 
+                    class="w-full h-full object-cover"
+                />
             </div>
 
-            <!-- Main Navigation Links -->
-            <nav class="hidden lg:flex items-center gap-1 bg-white p-1.5 rounded-2xl border border-slate-200">
-                <button onclick="showSection('vision')" id="nav-vision" class="nav-btn-active px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-2">
-                    <i class="fa-solid fa-eye"></i> Vision
-                </button>
-                <button onclick="showSection('poles')" id="nav-poles" class="px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider text-slate-600 hover:text-slate-900 transition-all flex items-center gap-2">
-                    <i class="fa-solid fa-cubes"></i> Pôles & Organigramme
-                </button>
-                <button onclick="showSection('recrutement')" id="nav-recrutement" class="px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider text-slate-600 hover:text-slate-900 transition-all flex items-center gap-2">
-                    <i class="fa-solid fa-user-plus text-amber-400"></i> Auditions & Joindre
-                </button>
-                <button onclick="showSection('spirituel')" id="nav-spirituel" class="px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider text-slate-600 hover:text-slate-900 transition-all flex items-center gap-2">
-                    <i class="fa-solid fa-hands-praying"></i> Vie Spirituelle
-                </button>
-                <button onclick="showSection('directory')" id="nav-directory" class="px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider text-slate-600 hover:text-slate-900 transition-all flex items-center gap-2">
-                    <i class="fa-solid fa-users"></i> Membres PM
-                </button>
-                <button onclick="showSection('planning')" id="nav-planning" class="px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider text-slate-600 hover:text-slate-900 transition-all flex items-center gap-2">
-                    <i class="fa-solid fa-calendar-days"></i> Planning 2026
-                </button>
-            </nav>
+            <!-- Écriture Logo (Taille ajustée pour ne pas écraser la navbar) -->
+            <div class="h-10 w-auto overflow-hidden shrink-0">
+                <img 
+                    src="images/LogosEcritures.png" 
+                    alt="Prodiges Musique" 
+                    class="h-full w-auto object-contain"
+                />
+            </div>
+        </div>
 
-            <!-- Quick Actions -->
-            <div class="flex items-center gap-2 sm:gap-3">
-                <button onclick="openAuditionModal()" class="bg-amber-500 hover:bg-amber-600 text-black font-extrabold px-3.5 py-2 rounded-xl text-xs transition flex items-center gap-1.5 shadow-lg shadow-amber-500/20">
-              Postuler
-                </button>
-               <!--  <button onclick="window.print()" class="hidden sm:flex items-center gap-2 bg-slate-100 hover:bg-slate-100 text-slate-900 border border-slate-200 px-3.5 py-2 rounded-xl text-xs font-semibold transition">
-                    <i class="fa-solid fa-file-pdf text-brand-red"></i> PDF
-                </button> -->
-                <button onclick="openContactModal()" class="bg-brand-blue-600 hover:bg-red-200 text-slate-900 px-3.5 py-2 rounded-xl text-xs font-bold transition flex items-center gap-1.5 shadow-lg shadow-brand-red/30">
+        <!-- Main Navigation Links (CENTRE) -->
+        <nav class="hidden lg:flex items-center gap-1 bg-white p-1.5 rounded-2xl border border-slate-200 shrink-0">
+            <button onclick="showSection('vision')" id="nav-vision" class="nav-btn-active px-3.5 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-2">
+                <i class="fa-solid fa-eye"></i> Vision
+            </button>
+            <button onclick="showSection('poles')" id="nav-poles" class="px-3.5 py-2 rounded-xl text-xs font-bold uppercase tracking-wider text-slate-600 hover:text-slate-900 transition-all flex items-center gap-2">
+                <i class="fa-solid fa-cubes"></i> Organigramme
+            </button>
+            <button onclick="showSection('recrutement')" id="nav-recrutement" class="px-3.5 py-2 rounded-xl text-xs font-bold uppercase tracking-wider text-slate-600 hover:text-slate-900 transition-all flex items-center gap-2">
+                <i class="fa-solid fa-user-plus text-amber-400"></i> Nous rejoindre
+            </button>
+            <button onclick="showSection('spirituel')" id="nav-spirituel" class="px-3.5 py-2 rounded-xl text-xs font-bold uppercase tracking-wider text-slate-600 hover:text-slate-900 transition-all flex items-center gap-2">
+                <i class="fa-solid fa-hands-praying"></i> Vie Spirituelle
+            </button>
+            <button onclick="showSection('directory')" id="nav-directory" class="px-3.5 py-2 rounded-xl text-xs font-bold uppercase tracking-wider text-slate-600 hover:text-slate-900 transition-all flex items-center gap-2">
+                <i class="fa-solid fa-users"></i> Membres
+            </button>
+            <button onclick="showSection('planning')" id="nav-planning" class="px-3.5 py-2 rounded-xl text-xs font-bold uppercase tracking-wider text-slate-600 hover:text-slate-900 transition-all flex items-center gap-2">
+                <i class="fa-solid fa-calendar-days"></i> Planning 2026
+            </button>
+        </nav>
+
+        <!-- Quick Actions (DROITE) -->
+        <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+            <button onclick="openAuditionModal()" class="bg-amber-500 hover:bg-amber-600 text-black font-extrabold px-3.5 py-2 rounded-xl text-xs transition flex items-center gap-1.5 shadow-lg shadow-amber-500/20">
+                Postuler
+            </button>
+            <button onclick="openContactModal()" class="bg-brand-blue-600 hover:bg-red-200 text-slate-900 px-3.5 py-2 rounded-xl text-xs font-bold transition flex items-center gap-1.5 shadow-lg shadow-brand-red/30">
                 <i class="fa-solid fa-envelope"></i> Contact
-                </button>
-            </div>
+            </button>
         </div>
 
-        <!-- Mobile Navigation Bar -->
-        <div class="lg:hidden flex overflow-x-auto gap-2 p-3 bg-white border-t border-slate-200 no-print text-xs font-bold uppercase">
-            <button onclick="showSection('vision')" class="px-3 py-1.5 rounded-lg bg-slate-100 whitespace-nowrap"><i class="fa-solid fa-eye"></i> Vision</button>
-            <button onclick="showSection('poles')" class="px-3 py-1.5 rounded-lg bg-slate-100 whitespace-nowrap"><i class="fa-solid fa-cubes"></i> Pôles</button>
-            <button onclick="showSection('recrutement')" class="px-3 py-1.5 rounded-lg bg-slate-100 whitespace-nowrap"><i class="fa-solid fa-microphone"></i> Recrutement</button>
-            <button onclick="showSection('spirituel')" class="px-3 py-1.5 rounded-lg bg-slate-100 whitespace-nowrap"><i class="fa-solid fa-hands-praying"></i> Prière</button>
-            <button onclick="showSection('directory')" class="px-3 py-1.5 rounded-lg bg-slate-100 whitespace-nowrap"><i class="fa-solid fa-users"></i> Membres</button>
-            <button onclick="showSection('planning')" class="px-3 py-1.5 rounded-lg bg-slate-100 whitespace-nowrap"><i class="fa-solid fa-calendar"></i> Planning</button>
-        </div>
-    </header>
+    </div>
+
+    <!-- Mobile Navigation Bar -->
+    <div class="lg:hidden flex overflow-x-auto gap-2 p-3 bg-white border-t border-slate-200 no-print text-xs font-bold uppercase">
+        <button onclick="showSection('vision')" class="px-3 py-1.5 rounded-lg bg-slate-100 whitespace-nowrap"><i class="fa-solid fa-eye"></i> Vision</button>
+        <button onclick="showSection('poles')" class="px-3 py-1.5 rounded-lg bg-slate-100 whitespace-nowrap"><i class="fa-solid fa-cubes"></i> Pôles</button>
+        <button onclick="showSection('recrutement')" class="px-3 py-1.5 rounded-lg bg-slate-100 whitespace-nowrap"><i class="fa-solid fa-microphone"></i> Recrutement</button>
+        <button onclick="showSection('spirituel')" class="px-3 py-1.5 rounded-lg bg-slate-100 whitespace-nowrap"><i class="fa-solid fa-hands-praying"></i> Prière</button>
+        <button onclick="showSection('directory')" class="px-3 py-1.5 rounded-lg bg-slate-100 whitespace-nowrap"><i class="fa-solid fa-users"></i> Membres</button>
+        <button onclick="showSection('planning')" class="px-3 py-1.5 rounded-lg bg-slate-100 whitespace-nowrap"><i class="fa-solid fa-calendar"></i> Planning</button>
+    </div>
+</header>
 
     <main class="max-w-7xl mx-auto px-4 sm:px-6 py-8 flex-grow w-full space-y-8">
 
@@ -177,12 +171,12 @@
     />
 
     <!-- 2. CALQUE DE NOIRCISSEMENT (OVERLAY) -->
-    <!-- Ajustez bg-black/70 (70% de noir) si vous voulez plus ou moins sombre -->
-    <div class="absolute inset-0 bg-black/70 backdrop-blur-[2px] z-0"></div>
+    <!-- Ajustez bg-black/50 (50% de noir) si vous voulez plus ou moins sombre -->
+    <div class="absolute inset-0 bg-black/50 backdrop-blur-[1px] z-0"></div>
 
     <!-- EFFETS DE DÉGRADÉ & DÉCORATION -->
     <div class="absolute -right-10 -bottom-10 w-72 h-72 bg-brand-red/20 rounded-full blur-3xl pointer-events-none z-0"></div>
-    <div class="absolute top-4 right-8 text-white/5 text-9xl pointer-events-none font-black font-display z-0">PM</div>
+    <!-- <div class="absolute top-4 right-8 text-white/5 text-9xl pointer-events-none font-black font-display z-0">PM</div> -->
 
     <!-- CONTENU PRINCIPAL (Placé au-dessus avec z-10) -->
     <div class="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-8">
@@ -246,20 +240,22 @@
                             </span>
                         </div>
                         
-                        <div class="flex items-center gap-4 mb-6">
-                            <div class="w-14 h-14 rounded-2xl bg-black overflow-hidden flex items-center justify-center shadow-lg border border-slate-800 shrink-0">
-    <img 
-        src="images/berger1.JPG" 
-        alt="Logo Prodiges Musique" 
-        class="w-full h-full object-cover"
-    />
+                        <div class="flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-6 mb-6">
+    <!-- Conteneur d'image agrandi -->
+    <div class="w-28 h-28 sm:w-36 sm:h-36 rounded-3xl bg-black overflow-hidden flex items-center justify-center shadow-xl border border-slate-800 shrink-0">
+        <img 
+            src="images/berger1.JPG" 
+            alt="Pasteur Samuel EBOUMBOU" 
+            class="w-full h-full object-cover object-top"
+        />
+    </div>
+    
+    <!-- Informations texte alignées -->
+    <div class="text-center sm:text-left space-y-1">
+        <h3 class="text-xl sm:text-2xl font-bold text-slate-900">Pasteur Samuel EBOUMBOU</h3>
+        <p class="text-xs sm:text-sm text-amber-500 font-semibold">Berger Principal des Églises Jeunes Prodiges (EJP)</p>
+    </div>
 </div>
-                            <div>
-                                <h3 class="text-xl font-bold text-slate-900">Pasteur Samuel EBOUMBOU</h3>
-                                <p class="text-xs text-amber-400 font-semibold">Berger Principal des Églises Jeunes Prodiges (EJP)</p>
-                            </div>
-                        </div>
-
                         <blockquote class="text-slate-700 text-xs sm:text-sm italic leading-relaxed space-y-3 bg-slate-50/50 p-5 rounded-2xl border border-slate-200">
                             <p>
                                 "Le but de Prodiges musique est que Jésus soit élevé au sein de l'église et que la gloire de Dieu soit manifeste au milieu de nous, parce que c'est la gloire de Dieu qui transforme les cœurs. L'adoration véritable commence avant même d'entonner un chant, c'est d'abord une offrande de soi afin d'être un instrument entre les mains de Dieu et d'être pleinement conduit par le Saint-Esprit."
@@ -344,6 +340,7 @@
             </div>
 
           <!-- Nos Valeurs (5 piliers) -->
+
 <div>
     <div class="text-center max-w-xl mx-auto mb-6">
         <span class="text-xs font-extrabold text-brand-red uppercase tracking-widest">Culture du Ministère</span>
@@ -354,7 +351,8 @@
         
         <!-- Valeur 1: Cœur de Dieu -->
         <div class="pm-card p-5 rounded-2xl space-y-2 text-center flex flex-col items-center">
-            <div class="w-12 h-12 rounded-xl overflow-hidden mb-2 shadow-sm shrink-0">
+            <!-- Image agrandie (w-24 h-24 sm:w-28 sm:h-28) -->
+            <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden mb-3 shadow-md border-2 border-brand-red/10 shrink-0">
                 <img src="images/coeur.jpeg" alt="Cœur de Dieu" class="w-full h-full object-cover" />
             </div>
             <h4 class="text-sm font-bold text-slate-900">Cœur de Dieu</h4>
@@ -364,7 +362,7 @@
 
         <!-- Valeur 2: Parole de Dieu -->
         <div class="pm-card p-5 rounded-2xl space-y-2 text-center flex flex-col items-center">
-            <div class="w-12 h-12 rounded-xl overflow-hidden mb-2 shadow-sm shrink-0">
+            <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden mb-3 shadow-md border-2 border-amber-500/10 shrink-0">
                 <img src="images/parole.JPG" alt="Parole de Dieu" class="w-full h-full object-cover" />
             </div>
             <h4 class="text-sm font-bold text-slate-900">Parole de Dieu</h4>
@@ -374,7 +372,7 @@
 
         <!-- Valeur 3: Unité -->
         <div class="pm-card p-5 rounded-2xl space-y-2 text-center flex flex-col items-center">
-            <div class="w-12 h-12 rounded-xl overflow-hidden mb-2 shadow-sm shrink-0">
+            <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden mb-3 shadow-md border-2 border-indigo-500/10 shrink-0">
                 <img src="images/touss.jpeg" alt="Unité" class="w-full h-full object-cover" />
             </div>
             <h4 class="text-sm font-bold text-slate-900">Unité</h4>
@@ -384,7 +382,7 @@
 
         <!-- Valeur 4: Consécration -->
         <div class="pm-card p-5 rounded-2xl space-y-2 text-center flex flex-col items-center">
-            <div class="w-12 h-12 rounded-xl overflow-hidden mb-2 shadow-sm shrink-0">
+            <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden mb-3 shadow-md border-2 border-emerald-500/10 shrink-0">
                 <img src="images/conse.jpg" alt="Consécration" class="w-full h-full object-cover" />
             </div>
             <h4 class="text-sm font-bold text-slate-900">Consécration</h4>
@@ -394,8 +392,8 @@
 
         <!-- Valeur 5: Excellence -->
         <div class="pm-card p-5 rounded-2xl space-y-2 text-center sm:col-span-2 lg:col-span-1 flex flex-col items-center">
-            <div class="w-12 h-12 rounded-xl overflow-hidden mb-2 shadow-sm shrink-0">
-                <img src="images/noah.jpg" alt="Excellence" class="w-full h-full object-cover" />
+            <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden mb-3 shadow-md border-2 border-purple-500/10 shrink-0">
+                <img src="images/exel.jpeg" alt="Excellence" class="w-full h-full object-cover" />
             </div>
             <h4 class="text-sm font-bold text-slate-900">Excellence</h4>
             <p class="text-[11px] text-slate-600 leading-normal">Aspirer constantly à rendre un service excellent à Dieu.</p>
@@ -470,87 +468,93 @@
                 <h3 class="text-lg font-bold text-slate-900 mb-2">Direction du Ministère PM</h3>
                 <p class="text-xs text-slate-600 mb-4">Pilotage stratégique, accompagnement pastoral et formation technique.</p>
 
-                <div class="space-y-2.5">
-                    
-                    <!-- Pasteur Samuel EBOUMBOU -->
-                    <div class="p-3 bg-slate-50/60 rounded-2xl border border-slate-200 flex items-center justify-between">
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-xl overflow-hidden shadow-sm shrink-0 bg-slate-200">
-                                <img src="images/P1140346.jpg" alt="Pasteur Samuel EBOUMBOU" class="w-full h-full object-cover">
-                            </div>
-                            <div>
-                                <div class="text-xs font-bold text-slate-900">Pasteur Samuel EBOUMBOU</div>
-                                <div class="text-[10px] text-amber-400 font-semibold">Supervision Spirituelle</div>
-                            </div>
-                        </div>
-                        <span class="px-2 py-0.5 rounded bg-amber-500/20 text-amber-400 text-[9px] font-bold">BERGER</span>
-                    </div>
-
-                    <!-- Emmanuella GBEKOU -->
-                    <div class="p-3 bg-slate-50/60 rounded-2xl border border-slate-200 flex items-center justify-between">
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-xl overflow-hidden shadow-sm shrink-0 bg-slate-200">
-                                <img src="images/emma.jpg" alt="Emmanuella GBEKOU" class="w-full h-full object-cover">
-                            </div>
-                            <div>
-                                <div class="text-xs font-bold text-slate-900">Emmanuella GBEKOU</div>
-                                <div class="text-[10px] text-brand-red font-semibold">Responsable Principale</div>
-                            </div>
-                        </div>
-                        <span class="px-2 py-0.5 rounded bg-brand-red/20 text-brand-red text-[9px] font-bold">Responsable</span>
-                    </div>
-
-                    <!-- Grille des Responsables de Pôles avec photos -->
-                    <div class="grid grid-cols-2 gap-2 text-xs pt-1">
-                        
-                        <!-- Stéphane ZOA -->
-                        <div class="bg-slate-50/40 p-2.5 rounded-xl border border-slate-200 flex items-center gap-2.5">
-                            <div class="w-8 h-8 rounded-lg overflow-hidden shrink-0 bg-slate-200">
-                                <img src="images/steph.jpg" alt="Stéphane ZOA" class="w-full h-full object-cover">
-                            </div>
-                            <div>
-                                <div class="text-[10px] text-slate-600">Responsable musiciens</div>
-                                <div class="text-xs font-bold text-slate-900">Stéphane ZOA</div>
-                            </div>
-                        </div>
-
-                        <!-- Aurore SOBNGWI -->
-                        <div class="bg-slate-50/40 p-2.5 rounded-xl border border-slate-200 flex items-center gap-2.5">
-                            <div class="w-8 h-8 rounded-lg overflow-hidden shrink-0 bg-slate-200">
-                                <img src="images/Aurore.jpg" alt="Aurore SOBNGWI" class="w-full h-full object-cover">
-                            </div>
-                            <div>
-                                <div class="text-[10px] text-slate-600">Responsable formation</div>
-                                <div class="text-xs font-bold text-slate-900">Aurore SOBNGWI</div>
-                            </div>
-                        </div>
-
-                        <!-- Joseph ZOUHONGBE -->
-                        <div class="bg-slate-50/40 p-2.5 rounded-xl border border-slate-200 flex items-center gap-2.5">
-                            <div class="w-8 h-8 rounded-lg overflow-hidden shrink-0 bg-slate-200">
-                                <img src="images/joseph.jpg" alt="Joseph ZOUHONGBE" class="w-full h-full object-cover">
-                            </div>
-                            <div>
-                                <div class="text-[10px] text-slate-600">Vie spirituelle</div>
-                                <div class="text-xs font-bold text-slate-900">Joseph ZOUHONGBE</div>
-                            </div>
-                        </div>
-
-                        <!-- Leslie TENYONG -->
-                        <div class="bg-slate-50/40 p-2.5 rounded-xl border border-slate-200 flex items-center gap-2.5">
-                            <div class="w-8 h-8 rounded-lg overflow-hidden shrink-0 bg-slate-200">
-                                <img src="images/leslie.jpg" alt="Leslie TENYONG" class="w-full h-full object-cover">
-                            </div>
-                            <div>
-                                <div class="text-[10px] text-slate-600">Orga. & Events</div>
-                                <div class="text-xs font-bold text-slate-900">Leslie TENYONG</div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
+                <div class="space-y-3">
+    
+    <!-- Pasteur Samuel EBOUMBOU -->
+    <div class="p-3.5 bg-slate-50/60 rounded-2xl border border-slate-200 flex items-center justify-between gap-3">
+        <div class="flex items-center gap-3.5">
+            <!-- Image agrandie à w-16 h-16 -->
+            <div class="w-16 h-16 rounded-xl overflow-hidden shadow-sm shrink-0 bg-slate-200 border border-slate-300/60">
+                <img src="images/P1140346.jpg" alt="Pasteur Samuel EBOUMBOU" class="w-full h-full object-cover object-top">
+            </div>
+            <div>
+                <div class="text-sm font-bold text-slate-900">Pasteur Samuel EBOUMBOU</div>
+                <div class="text-xs text-amber-500 font-semibold">Supervision Spirituelle</div>
             </div>
         </div>
+        <span class="px-2.5 py-1 rounded bg-amber-500/20 text-amber-500 text-[10px] font-bold shrink-0">BERGER</span>
+    </div>
+
+    <!-- Emmanuella GBEKOU -->
+    <div class="p-3.5 bg-slate-50/60 rounded-2xl border border-slate-200 flex items-center justify-between gap-3">
+        <div class="flex items-center gap-3.5">
+            <!-- Image agrandie à w-16 h-16 -->
+            <div class="w-16 h-16 rounded-xl overflow-hidden shadow-sm shrink-0 bg-slate-200 border border-slate-300/60">
+                <img src="images/emma.jpg" alt="Emmanuella GBEKOU" class="w-full h-full object-cover object-top">
+            </div>
+            <div>
+                <div class="text-sm font-bold text-slate-900">Emmanuella GBEKOU</div>
+                <div class="text-xs text-brand-red font-semibold">Responsable Principale</div>
+            </div>
+        </div>
+        <span class="px-2.5 py-1 rounded bg-brand-red/20 text-brand-red text-[10px] font-bold shrink-0">RESPONSABLE</span>
+    </div>
+
+    <!-- Grille des Responsables de Pôles avec photos -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1">
+        
+        <!-- Stéphane ZOA -->
+        <div class="bg-slate-50/40 p-3 rounded-xl border border-slate-200 flex items-center gap-3">
+            <!-- Image agrandie à w-12 h-12 -->
+            <div class="w-12 h-12 rounded-lg overflow-hidden shrink-0 bg-slate-200 border border-slate-300/50">
+                <img src="images/steph.jpg" alt="Stéphane ZOA" class="w-full h-full object-cover object-top">
+            </div>
+            <div>
+                <div class="text-[11px] text-slate-500 font-medium">Responsable musiciens</div>
+                <div class="text-xs font-bold text-slate-900">Stéphane ZOA</div>
+            </div>
+        </div>
+
+        <!-- Aurore SOBNGWI -->
+        <div class="bg-slate-50/40 p-3 rounded-xl border border-slate-200 flex items-center gap-3">
+            <!-- Image agrandie à w-12 h-12 -->
+            <div class="w-12 h-12 rounded-lg overflow-hidden shrink-0 bg-slate-200 border border-slate-300/50">
+                <img src="images/Aurore.jpg" alt="Aurore SOBNGWI" class="w-full h-full object-cover object-top">
+            </div>
+            <div>
+                <div class="text-[11px] text-slate-500 font-medium">Responsable formation</div>
+                <div class="text-xs font-bold text-slate-900">Aurore SOBNGWI</div>
+            </div>
+        </div>
+
+        <!-- Joseph ZOUHONGBE -->
+        <div class="bg-slate-50/40 p-3 rounded-xl border border-slate-200 flex items-center gap-3">
+            <!-- Image agrandie à w-12 h-12 -->
+            <div class="w-12 h-12 rounded-lg overflow-hidden shrink-0 bg-slate-200 border border-slate-300/50">
+                <img src="images/joseph.jpg" alt="Joseph ZOUHONGBE" class="w-full h-full object-cover object-top">
+            </div>
+            <div>
+                <div class="text-[11px] text-slate-500 font-medium">Vie spirituelle</div>
+                <div class="text-xs font-bold text-slate-900">Joseph ZOUHONGBE</div>
+            </div>
+        </div>
+
+        <!-- Leslie TENYONG -->
+        <div class="bg-slate-50/40 p-3 rounded-xl border border-slate-200 flex items-center gap-3">
+            <!-- Image agrandie à w-12 h-12 -->
+            <div class="w-12 h-12 rounded-lg overflow-hidden shrink-0 bg-slate-200 border border-slate-300/50">
+                <img src="images/leslie.jpg" alt="Leslie TENYONG" class="w-full h-full object-cover object-top">
+            </div>
+            <div>
+                <div class="text-[11px] text-slate-500 font-medium">Orga. & Events</div>
+                <div class="text-xs font-bold text-slate-900">Leslie TENYONG</div>
+            </div>
+        </div>
+
+    </div>
+</div>
+                    
+                 
 
                 <!-- Distribution Chart -->
                 <div class="lg:col-span-7 pm-card rounded-3xl p-6 flex flex-col justify-between">
@@ -695,7 +699,7 @@
 
     <!-- 2. CALQUE D'ASSOMBRISSEMENT (OVERLAY DÉGRADÉ) -->
     <!-- Ce dégradé assombrit le fond tout en conservant les tons chauds du thème -->
-    <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/75 to-black/60 backdrop-blur-[1px] z-0"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-black/50 via-black/50 to-black/60 backdrop-blur-[1px] z-0"></div>
 
     <!-- 3. CONTENU (Rendu au-dessus grâce à z-10 et adapté aux couleurs sombres) -->
     <div class="relative z-10 max-w-3xl space-y-3">
@@ -1082,17 +1086,13 @@
                 </div>
             </div>
 
-            <button onclick="closeAuditionModal()" class="w-full py-3 bg-amber-500 hover:bg-amber-600 text-black font-extrabold rounded-2xl transition">
-               <a 
-    href="https://forms.gle/F5fDroDWwMtDGHCv5"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="bg-amber-500 hover:bg-amber-600 text-black font-extrabold px-3.5 py-2 rounded-xl text-xs transition flex items-center gap-1.5 shadow-lg shadow-amber-500/20"
+           <button 
+    onclick="closeAuditionModal()" 
+    class="w-full py-3 bg-amber-500 hover:bg-amber-600 text-black font-extrabold rounded-2xl transition flex items-center justify-center gap-2 shadow-lg shadow-amber-500/20"
 >
-                    <i class="fa-solid fa-paper-plane mr-2"></i>J'ai compris, je prépare ma candidature
-
-</a>
-            </button>
+    <i class="fa-solid fa-paper-plane"></i>
+    J'ai compris, je prépare ma candidature
+</button>
         </div>
     </div>
 
